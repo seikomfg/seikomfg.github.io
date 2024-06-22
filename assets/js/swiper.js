@@ -145,10 +145,7 @@ var swiper = new Swiper(".mySwiper", {
         prevEl: ".swiper-button-prev",
     },
 });
-var swiper = new Swiper(".property-gallary", {
-    
-    autoplay : 5000,
-    loop : true,
+var swiper = new Swiper(".product-gallary", {
     spaceBetween: 20,
     slidesPerView: 7,
     freeMode: true,
@@ -165,9 +162,7 @@ var swiper = new Swiper(".property-gallary", {
         },
     },
 });
-var swiper2 = new Swiper(".property-gallary2", {
-    autoplay : 5000,
-    loop : true,
+var swiper2 = new Swiper(".product-gallary2", {
     spaceBetween: 10,
     navigation: {
         nextEl: ".swiper-button-next",
@@ -175,5 +170,33 @@ var swiper2 = new Swiper(".property-gallary2", {
     },
     thumbs: {
         swiper: swiper,
+    },
+});
+
+var swiper3 = new Swiper(".product-gallary3", {
+    spaceBetween: 20,
+    slidesPerView: 7,
+    freeMode: true,
+    watchSlidesProgress: true,
+    breakpoints: {
+        0: {
+            slidesPerView: 3,
+        },
+        480: {
+            slidesPerView: 3,
+        },
+        767: {
+            slidesPerView: 5,
+        },
+    },
+});
+var swiper4 = new Swiper(".product-gallary4", {
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+        swiper: swiper3,
     },
 });
