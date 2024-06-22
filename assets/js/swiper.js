@@ -146,6 +146,9 @@ var swiper = new Swiper(".mySwiper", {
     },
 });
 var swiper = new Swiper(".property-gallary", {
+    
+    autoplay : 5000,
+    loop : true,
     spaceBetween: 20,
     slidesPerView: 7,
     freeMode: true,
@@ -163,6 +166,8 @@ var swiper = new Swiper(".property-gallary", {
     },
 });
 var swiper2 = new Swiper(".property-gallary2", {
+    autoplay : 5000,
+    loop : true,
     spaceBetween: 10,
     navigation: {
         nextEl: ".swiper-button-next",
