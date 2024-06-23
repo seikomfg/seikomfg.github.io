@@ -202,7 +202,7 @@ var swiper3 = new Swiper(".product-gallary3", {
         },
     },
 });
-var swiper2 = new Swiper(".product-gallary4", {
+var swiper4 = new Swiper(".product-gallary4", {
     speed:1000,
     autoplay: {
         delay: 6000,

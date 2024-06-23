@@ -9983,7 +9983,7 @@ a.mapboxgl-ctrl-logo {
   margin-bottom: -15px;
 }
 
-.feature-item:hover .feature-inner {
+.feature-item .feature-inner {
   -webkit-transform: translateY(-5px);
   -ms-transform: translateY(-5px);
   transform: translateY(-5px);
