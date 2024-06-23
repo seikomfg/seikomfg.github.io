@@ -19,6 +19,11 @@
 ; (function ($) {
 
   "use strict";
+
+  // 不保留页面滚动位置
+  if (history.scrollRestoration) {
+    history.scrollRestoration = 'manual';
+  }
   // Mobile Nav Hide Show
   if ($('.mobile-menu').length) {
 
@@ -139,7 +144,7 @@
 
   var goTop = function () {
     $(window).scroll(function () {
-      if ($(this).scrollTop() > 800) {
+      if ($(this).scrollTop() > 0) {
         $('.button-go').addClass('show');
       } else {
         $('.button-go').removeClass('show');
@@ -147,7 +152,7 @@
     });
 
     $('.button-go').on('click', function () {
-      $("html, body").animate({ scrollTop: 0 }, 1000);
+      $("html, body").animate({ scrollTop: 0 }, 0);
       return false;
     });  };
 
@@ -164,7 +169,7 @@
       $(".preload-container").fadeOut("slow", function () {
         $(this).remove();
       });
-    }, 1000);
+    }, 300);
   };
 
   var flatCounter = function () {
