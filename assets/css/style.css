@@ -10138,3 +10138,6 @@ a.mapboxgl-ctrl-logo {
 .icon-Group-12:before {
   content: "\ea3c";
 }
+.preload-container .middle{
+  width: 180px;
+} 
