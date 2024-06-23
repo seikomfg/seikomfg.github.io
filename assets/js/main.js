@@ -169,7 +169,7 @@
       $(".preload-container").fadeOut("slow", function () {
         $(this).remove();
       });
-    }, 300);
+    }, 1500);
   };
 
   var flatCounter = function () {

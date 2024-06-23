@@ -3349,15 +3349,19 @@ ul.social-icon li a i:hover {
   height: 100%;
   width: 100%;
   background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .preload-container .middle {
-  top: 50%;
+  /* top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
   position: absolute;
   z-index: 100;
-  margin: 0px 0px 0px -50px;
+  /* margin: 0px 0px 0px -50px; */
+  margin-top: -50vh;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
@@ -10005,6 +10009,7 @@ a.mapboxgl-ctrl-logo {
   transition: all 0.3s ease;
   border-radius: 14px;
     overflow: hidden;
+  background:  #ffffff
 }
 
 @media (min-width: 768px) {

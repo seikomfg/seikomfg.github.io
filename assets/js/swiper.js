@@ -163,7 +163,7 @@ var swiper = new Swiper(".product-gallary", {
     },
 });
 var swiper2 = new Swiper(".product-gallary2", {
-    speed:1000,
+    speed:800,
     autoplay: {
         delay: 6000,
         stopOnLastSlide: false,
@@ -203,7 +203,7 @@ var swiper3 = new Swiper(".product-gallary3", {
     },
 });
 var swiper4 = new Swiper(".product-gallary4", {
-    speed:1000,
+    speed:800,
     autoplay: {
         delay: 6000,
         stopOnLastSlide: false,
