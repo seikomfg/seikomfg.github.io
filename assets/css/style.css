@@ -5733,7 +5733,7 @@ ul.social-icon li a i:hover {
 /*------------ Widget icon-box ---------------- */
 .widget-icon-box {
   padding-top: 280px;
-  padding-bottom: 84px;
+  /* padding-bottom: 25px; */
   background-color: #F2F5FB;
 }
 
@@ -8804,6 +8804,7 @@ a.mapboxgl-ctrl-logo {
   }
   .widget-icon-box {
     padding-top: 232px;
+    /* padding-bottom: 25px; */
   }
   .mobie-app .mobie-app-content .title {
     margin-bottom: 20px;
@@ -9280,7 +9281,7 @@ a.mapboxgl-ctrl-logo {
   }
   .widget-icon-box {
     padding-top: 220px;
-    padding-bottom: 90px;
+    /* padding-bottom: 25px; */
   }
   .widget-car-service {
     padding-top: 90px;
