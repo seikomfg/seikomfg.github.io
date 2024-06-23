@@ -163,6 +163,18 @@ var swiper = new Swiper(".product-gallary", {
     },
 });
 var swiper2 = new Swiper(".product-gallary2", {
+    speed:1000,
+    autoplay: {
+        delay: 6000,
+        stopOnLastSlide: false,
+        disableOnInteraction: true,
+    },
+    loop: true,
+    pagination: {
+        el: ".swiper-pagination2",
+        clickable: true,
+        type: 'bullets',
+    },
     spaceBetween: 10,
     navigation: {
         nextEl: ".swiper-button-next",
@@ -190,7 +202,19 @@ var swiper3 = new Swiper(".product-gallary3", {
         },
     },
 });
-var swiper4 = new Swiper(".product-gallary4", {
+var swiper2 = new Swiper(".product-gallary4", {
+    speed:1000,
+    autoplay: {
+        delay: 6000,
+        stopOnLastSlide: false,
+        disableOnInteraction: true,
+    },
+    loop: true,
+    pagination: {
+        el: ".swiper-pagination2",
+        clickable: true,
+        type: 'bullets',
+    },
     spaceBetween: 10,
     navigation: {
         nextEl: ".swiper-button-next",
