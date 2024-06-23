@@ -10092,23 +10092,23 @@ a.mapboxgl-ctrl-logo {
 .myH4{
   text-align: left;
   box-sizing: border-box;
-  padding-left: 25px;
+  padding-left: 20px;
 }
 @media (min-width: 992px) {
   .myH4{
     text-align: left;
     box-sizing: border-box;
-    padding-left: 20px;
+    padding-left: 25px;
   }
 }
 .feature-item .feature-inner{
-  padding-left:25px ;
-  padding-right:25px ;
+  padding-left:20px ;
+  padding-right:20px ;
 }
 @media (min-width: 992px) {
   .feature-item .feature-inner{
-    padding-left:20px ;
-    padding-right:20px ;
+    padding-left:25px ;
+    padding-right:25px ;
   }
 }
 .lowercase{
@@ -10141,3 +10141,70 @@ a.mapboxgl-ctrl-logo {
 .preload-container .middle{
   width: 180px;
 } 
+
+
+/* carheadlights */
+.tf-car-service .my-content{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tf-car-service .my-content .title{
+  height: 100%;
+  margin: 0;
+}
+.tf-car-service .my-content .bottom-btn-wrap{
+  height: 100%;
+  margin: 0;
+}
+.tf-car-service .my-content {
+  padding: 16px 25px 16px 25px;
+}
+.tf-car-service .my-hover-listing-image {
+  min-height: min-content;
+}
+
+.widget-car-service .my-header-section{
+  padding-top: 0px;
+  margin: 0;
+  height: 128px;
+  flex-wrap: nowrap;
+}
+.widget-car-service .header-section .my-heading-section{
+  max-width: none;
+  width: auto;
+}
+
+.widget-car-service .my-header-section .nav{
+  padding-left: 0px;
+  padding-right: 0px;
+  justify-content: flex-end;
+}
+@media (max-width: 1400px) {
+  .widget-car-service .my-header-section{
+    display: block;
+    padding-top: 40px;
+    height:auto;
+  }
+  .widget-car-service .my-header-section .nav{
+    justify-content: flex-start;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+@media (max-width: 1200px) {
+  .my-widget-car-service{
+    padding-top: 100px;
+  }
+  .widget-car-service .my-header-section{
+    display: block;
+    padding-top: 0px;
+    height:auto;
+  }
+  .widget-car-service .my-header-section .nav{
+    justify-content: flex-start;
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+}
