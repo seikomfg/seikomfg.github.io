@@ -12,6 +12,10 @@
 
 (function ($) {
     "use strict";
+    // 不保留页面滚动位置
+    if (history.scrollRestoration) {
+        history.scrollRestoration = 'manual';
+    }
 
     var isMobile = {
         Android: function () {
