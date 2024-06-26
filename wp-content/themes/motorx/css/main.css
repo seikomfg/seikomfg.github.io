@@ -11403,4 +11403,17 @@ button:hover,
   .bottom .my-themesflat-socials{
     justify-content: center;
   }
+  .inner-canvas-nav .login-header{
+    display: none;
+  }
+}
+
+.mainnav_canvas{
+  margin-bottom: 0 !important;
+}
+#mainnav_canvas ul li a.my-link-a{
+  padding-right: 0;
+}
+.my-group-header-logo{
+  margin-bottom: 0;
 }
