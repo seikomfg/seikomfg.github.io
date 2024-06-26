@@ -158,7 +158,7 @@
             ) {
                 $(
                     ".modal-menu__body #mainnav-secondary .menu li:has(ul)"
-                ).append('<span class="icon-motorx-ona-38"></span>');
+                ).append('<span class="icon-seikomfg-ona-38"></span>');
             }
             $(this).find(".sub-menu").css({ display: "none" });
         });
@@ -347,7 +347,7 @@
         $("#preloader").fadeOut("slow", function () {
             setTimeout(function () {
                 $("#preloader").remove();
-            }, 1000);
+            }, 300);
         });
     };
 

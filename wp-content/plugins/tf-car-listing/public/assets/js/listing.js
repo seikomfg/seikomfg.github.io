@@ -1052,7 +1052,7 @@
                 touchDrag: false,
                 mouseDrag: false,
                 responsiveRefreshRate: 200,
-                navText: ['<i class="icon-motorx-arrow-left">', '<i class="icon-motorx-arrow-right">'],
+                navText: ['<i class="icon-seikomfg-arrow-left">', '<i class="icon-seikomfg-arrow-right">'],
             }).on('changed.owl.carousel', syncPosition);
 
             thumb2
@@ -1069,7 +1069,7 @@
                     slideSpeed: 500,
                     slideBy: slidesPerPage,
                     responsiveRefreshRate: 100,
-                    navText: ['<i class="icon-motorx-arrow-left">', '<i class="icon-motorx-arrow-right">'],
+                    navText: ['<i class="icon-seikomfg-arrow-left">', '<i class="icon-seikomfg-arrow-right">'],
                     responsive: {
                         0: {
                             items: 3,
@@ -1144,7 +1144,7 @@
                     autoplayTimeout: 5000,
                     smartSpeed: 850,
                     autoplayHoverPause: true,
-                    navText: ['<i class="icon-motorx-arrow-left">', '<i class="icon-motorx-arrow-right">'],
+                    navText: ['<i class="icon-seikomfg-arrow-left">', '<i class="icon-seikomfg-arrow-right">'],
                 });
                 $('.single-listing-image-main.slider-2').trigger('to.owl.carousel', 1);
             }

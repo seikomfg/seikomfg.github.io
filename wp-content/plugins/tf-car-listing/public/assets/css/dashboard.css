@@ -467,7 +467,7 @@
         width: calc(100% - 22px);
     }
 
-    .contact-home .icon-motorx-chat {
+    .contact-home .icon-seikomfg-chat {
         top: 15px;
     }
 
@@ -551,15 +551,15 @@
     margin-top: -13px;
 }
 
-.tfcl-dashboard-overview .card-body .tfcl-icon-overview .icon-motorx-clock {
+.tfcl-dashboard-overview .card-body .tfcl-icon-overview .icon-seikomfg-clock {
     font-size: 26px;
 }
 
-.tfcl-dashboard-overview .card-body .tfcl-icon-overview .icon-motorx-heart-2 {
+.tfcl-dashboard-overview .card-body .tfcl-icon-overview .icon-seikomfg-heart-2 {
     font-size: 25px;
 }
 
-.tfcl-dashboard-overview .card-body .tfcl-icon-overview .icon-motorx-feedback {
+.tfcl-dashboard-overview .card-body .tfcl-icon-overview .icon-seikomfg-feedback {
     font-size: 30px;
 }
 

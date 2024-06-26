@@ -7280,7 +7280,7 @@ footer .wp-block-search .wp-block-search__label {
   font-size: 20px;
   min-width: 50px;
 }
-.footer-widgets .widget ul.contact-info li i.icon-motorx-location {
+.footer-widgets .widget ul.contact-info li i.icon-seikomfg-location {
   font-size: 26px;
   margin-left: -6px;
 }
@@ -9583,7 +9583,7 @@ line-height: 30px;
   margin-bottom: 6.6px;
 }
 
-.widget-infor .group-icon .icon-motorx-grow2 {
+.widget-infor .group-icon .icon-seikomfg-grow2 {
   font-size: 15px;
   vertical-align: super;
   margin-right: 2px;
@@ -9592,7 +9592,7 @@ line-height: 30px;
   margin-left: 3px;
 }
 
-.widget-infor .group-icon .icon-motorx-grow1 {
+.widget-infor .group-icon .icon-seikomfg-grow1 {
   font-size: 17px;
   vertical-align: text-top;
   margin-right: 4px;
@@ -11388,4 +11388,19 @@ button:hover,
 
 .tf-megamenu .sub-menu > li {
   width: 50%;
+}
+
+/* self */
+.lastedupdated-e-con-inner{
+  padding: 40px 0 !important;
+}
+
+.bottom .my-themesflat-socials{
+  justify-content: flex-end;
+}
+
+@media (max-width: 991px) {
+  .bottom .my-themesflat-socials{
+    justify-content: center;
+  }
 }

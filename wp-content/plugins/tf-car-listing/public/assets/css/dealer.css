@@ -977,16 +977,16 @@ input[type="radio"]:checked {
     gap: 17px;
 }
 
-.dealer-customer-review .review-item .star-rating-review i.icon-motorx-star,
-.dealer-customer-review .overall-rating-detail .overall-rating-detail-item .overall-rating-detail-star i.icon-motorx-star,
-.tfcl-list-dealer-shortcode .dealer-item .dealer-content .dealer-info .rating-dealer i.icon-motorx-star {
+.dealer-customer-review .review-item .star-rating-review i.icon-seikomfg-star,
+.dealer-customer-review .overall-rating-detail .overall-rating-detail-item .overall-rating-detail-star i.icon-seikomfg-star,
+.tfcl-list-dealer-shortcode .dealer-item .dealer-content .dealer-info .rating-dealer i.icon-seikomfg-star {
     font-size: 12px;
     color: #ccc;
 }
 
-.dealer-customer-review .review-item .star-rating-review i.icon-motorx-star.active::before,
+.dealer-customer-review .review-item .star-rating-review i.icon-seikomfg-star.active::before,
 .dealer-customer-review .overall-rating-detail .overall-rating-detail-item .overall-rating-detail-star i.active::before,
-.tfcl-list-dealer-shortcode .dealer-item .dealer-content .dealer-info .rating-dealer i.icon-motorx-star.active::before{
+.tfcl-list-dealer-shortcode .dealer-item .dealer-content .dealer-info .rating-dealer i.icon-seikomfg-star.active::before{
     content: '\e942';
     color: #FBAD17;
 }
@@ -1092,7 +1092,7 @@ input[type="radio"]:checked {
     text-transform: capitalize;
 }
 
-.overall-rating-detail .rating-info .icon-motorx-star.active::before {
+.overall-rating-detail .rating-info .icon-seikomfg-star.active::before {
     color: #FBAD17;
 }
 
@@ -1188,7 +1188,7 @@ input[type="radio"]:checked {
     fill: #000;
 }
 
-.tfcl_dealer_add_new_review .icon-motorx-star.active::before {
+.tfcl_dealer_add_new_review .icon-seikomfg-star.active::before {
     color: #FFBB0B;
     content: '\e942';
 }

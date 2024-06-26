@@ -797,15 +797,15 @@
 
 /* Rating Review */
 
-.review-item .icon-motorx-star.active::before {
+.review-item .icon-seikomfg-star.active::before {
     color: #FBAD17;
 }
 
-.listing-customer-review .overall-rating-detail .overall-rating-detail-item .rating-info .icon-motorx-star.active::before {
+.listing-customer-review .overall-rating-detail .overall-rating-detail-item .rating-info .icon-seikomfg-star.active::before {
     color: #FBAD17;
 }
 
-.add-new-review .icon-motorx-star.active::before {
+.add-new-review .icon-seikomfg-star.active::before {
     color: #FFBB0B;
 }
 
