@@ -255,7 +255,7 @@
                         header.removeClass("fixed-show");
                         injectSpace.hide();
                     }
-                    if ( $(window).scrollTop() > 500 ) {
+                    if ( $(window).scrollTop() > 72 ) {
                         header.addClass('header-sticky');
                         $(".header-sticky").css("top", wpadminbar);
                     } else {
@@ -318,7 +318,7 @@
 
     var goTop = function () {
         $(window).scroll(function () {
-            if ($(this).scrollTop() > 500) {
+            if ($(this).scrollTop() > 72) {
                 $(".go-top").addClass("show");
             } else {
                 $(".go-top").removeClass("show");
