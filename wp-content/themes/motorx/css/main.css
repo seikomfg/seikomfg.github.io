@@ -11496,3 +11496,10 @@ button:hover,
   gap: 10px;
   padding: 40px;
 }
+@media (max-width: 1025px) {
+  .my-filter-bar {
+    gap: 10px;
+    padding-top: 40px;
+    padding-bottom: 0;
+  }
+}
