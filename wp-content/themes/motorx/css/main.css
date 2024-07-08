@@ -11485,3 +11485,14 @@ button:hover,
   padding-bottom: 0;
   border-bottom: none;
 }
+
+.elementor-2396 .elementor-element.elementor-element-091d843 .tf-title-section .title-section.my-title-section{
+  text-align: center;
+}
+.elementor-2396 .elementor-element.elementor-element-091d843.elementor-element{
+  align-self:center
+}
+.my-filter-bar {
+  gap: 10px;
+  padding: 40px;
+}
