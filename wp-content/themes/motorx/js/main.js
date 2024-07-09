@@ -352,6 +352,42 @@
     };
 
 
+    var swiper = new Swiper(".carousel-5", {
+        autoplay: {
+            delay: 0,
+            disableOnInteraction: false,
+        },
+        slidesPerView: 2,
+        loop: true,
+        spaceBetween: 30,
+        speed: 10000,
+        observer: true,
+        observeParents: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            450: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+            868: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+            },
+            992: {
+                slidesPerView: 5,
+                spaceBetween: 30,
+            },
+        },
+    });
+
+
     // Dom Ready
     $(function () {
         Modal_Right();
