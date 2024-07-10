@@ -11503,3 +11503,12 @@ button:hover,
     padding-bottom: 0;
   }
 }
+
+
+.tf-title-section .title-section h3.heading {
+  font-size: 48px;
+}
+
+.elementor-2396 .elementor-element.elementor-element-22cd1a7 .tf-title-section .title-section h1.heading{
+  font-size: 50px;
+}
