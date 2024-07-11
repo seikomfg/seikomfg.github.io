@@ -11526,7 +11526,10 @@ button:hover,
 }
 
 @media only screen and (max-width: 999px){
-  #header.header-default, .themesflat-top.style-01 {
+  .themesflat-top.style-01.myheader {
     display:none
   }
+}
+.my-description-p{
+  word-spacing: 5px
 }
