@@ -11512,3 +11512,21 @@ button:hover,
 .elementor-2396 .elementor-element.elementor-element-22cd1a7 .tf-title-section .title-section h1.heading{
   font-size: 50px;
 }
+
+@media only screen and (max-width: 1600px){
+  #mainnav > ul > li {
+      margin-left: 12px;
+      margin-right: 12px;
+  }
+}
+
+#mainnav>ul>li {
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+@media only screen and (max-width: 999px){
+  #header.header-default, .themesflat-top.style-01 {
+    display:none
+  }
+}
