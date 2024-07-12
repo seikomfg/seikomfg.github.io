@@ -11533,3 +11533,23 @@ button:hover,
 .my-description-p{
   word-spacing: 5px
 }
+
+
+@media only screen and (max-width: 768px){
+  .elementor-3232 .elementor-element.elementor-element-c3233c2{
+    flex-wrap: wrap;
+  }
+}
+
+.my-more{
+  align-self: center;
+}
+
+.more-carheadlights{
+  font-size: 28px;
+  color:var(--theme-primary-color);
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY();
+}
