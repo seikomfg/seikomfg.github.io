@@ -11494,7 +11494,7 @@ button:hover,
 }
 .my-filter-bar {
   gap: 10px;
-  padding: 40px;
+  padding: 40px 40px 50px 40px;
 }
 @media (max-width: 1025px) {
   .my-filter-bar {
@@ -11552,4 +11552,21 @@ button:hover,
   right: 0;
   top: 50%;
   transform: translateY();
+}
+
+.elementor-2396 .elementor-element.elementor-element-232a174{
+  margin-top: 240px;
+  margin-left: -100px;
+  margin-right: 0;
+}
+
+
+*{
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+  user-select: none; /* Standard syntax */
+}
+.tf-listing-wrap .featured-property .date-car i{
+  padding-right: 6px;
 }

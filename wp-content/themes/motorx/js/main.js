@@ -377,11 +377,11 @@
                 spaceBetween: 30,
             },
             868: {
-                slidesPerView: 4,
+                slidesPerView: 3,
                 spaceBetween: 30,
             },
             992: {
-                slidesPerView: 5,
+                slidesPerView: 3,
                 spaceBetween: 30,
             },
         },
