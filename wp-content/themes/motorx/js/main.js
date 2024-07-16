@@ -443,7 +443,7 @@
                                 <div class="listing-item view-gallery"
                                     data-mfp-event
                                     data-gallery="${banner}"
-                                    title="BMW 3 Series Hybrid">
+                                    title="${title}">
                                     <div class="images">
                                         <img decoding="async"
                                             src="${banner[3]}"
