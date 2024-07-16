@@ -1544,7 +1544,7 @@
 @media only screen and (max-width: 1300px) {
     .tf-listing-wrap.style1 .wrap-listing-post .item .listing-post .description {
         gap: 10px;
-        justify-content: left;
+        justify-content: space-between;
     }
 
     .tf-listing-wrap .wrap-listing-post .item .listing-post .description ul,

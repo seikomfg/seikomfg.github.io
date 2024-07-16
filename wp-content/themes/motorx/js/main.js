@@ -367,11 +367,11 @@
     },
     breakpoints: {
       450: {
-        slidesPerView: 2,
+        slidesPerView: 1,
         spaceBetween: 30,
       },
       768: {
-        slidesPerView: 3,
+        slidesPerView: 2,
         spaceBetween: 30,
       },
       868: {
@@ -493,14 +493,16 @@
                             <li
                                 class="listing-information transmission">
                                 <div class="inner">
-                                    <span>minimum</span>
+                                    <span
+                                      class="my-span">minimum</span>
                                     <p>${minimum}</p>
                                 </div>
                             </li>
                             <li
                                 class="listing-information transmission">
                                 <div class="inner">
-                                    <span>Trade Mode</span>
+                                    <span
+                                      class="my-span">Trade Mode</span>
                                     <p>${trade_mode}</p>
                                 </div>
                             </li>

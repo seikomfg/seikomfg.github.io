@@ -11581,3 +11581,6 @@ abc{
       display: block;
   }
 }
+.tf-listing-wrap.style1 .wrap-listing-post .item .listing-post .description ul{
+  justify-content: space-between;
+}
