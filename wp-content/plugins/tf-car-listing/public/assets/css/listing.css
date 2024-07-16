@@ -1018,7 +1018,7 @@
     .related-single-listing .tfcl-listing-card .infor-description li,
     .wrap-tfcl-listing-card .tfcl-listing-card .infor-description li {
         display: block;
-        text-align: center;
+        text-align: left;
     }
 
     .tf-listing-wrap .wrap-listing-post .item .listing-post .description ul,

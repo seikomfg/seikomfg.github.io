@@ -11561,7 +11561,7 @@ button:hover,
 }
 
 
-*{
+abc{
   -webkit-user-select: none; /* Safari */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+ */
@@ -11569,4 +11569,15 @@ button:hover,
 }
 .tf-listing-wrap .featured-property .date-car i{
   padding-right: 6px;
+}
+.tf-listing-wrap.style1 .wrap-listing-post .item .listing-post .content .title a.title-a{
+  color:var(--theme-primary-color)
+}
+
+@media only screen and (max-width: 1200px) {
+  .tf-listing-wrap .wrap-listing-post .item .listing-post .description ul li .inner span.my-span,
+  .related-single-listing .tfcl-listing-card .infor-description li .inner span.my-span,
+  .wrap-tfcl-listing-card .tfcl-listing-card .infor-description li .inner span.my-span {
+      display: block;
+  }
 }

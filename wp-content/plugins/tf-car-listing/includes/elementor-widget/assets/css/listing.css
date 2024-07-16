@@ -401,7 +401,8 @@
     font-weight: 600;
     letter-spacing: 0.7px;
     text-transform: uppercase;
-    margin-left: 5px;
+    /* margin-left: 5px; */
+    color: var(--theme-primary-color);
 }
 
 .tf-listing-wrap .wrap-listing-post .button-details a:hover {
