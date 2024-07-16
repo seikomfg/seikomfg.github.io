@@ -544,7 +544,29 @@
     currentDoms = $(items);
 
     $("#carheadlights .listing").html(currentDoms);
-  };
+
+    $('.hover-listing-image').each(function () {
+      $(this).find('.listing-item:first-child').addClass('active');
+      $(this).find('.bullet-hover-listing .bl-item:first-child').addClass('active');
+
+      $(this).find('.listing-item').hover(
+          function () {
+              var index = $(this).index();
+              $(this).closest('.hover-listing-image').find('.listing-item').removeClass('active');
+              $(this).addClass("active");
+
+              $(this).closest('.hover-listing-image').find('.bl-item').removeClass('active');
+              $(this).closest('.hover-listing-image').find('.bl-item').eq(index).addClass('active');
+          },
+          function () {
+              $(this).removeClass("active");
+              $(this).closest('.hover-listing-image').find('.bl-item').removeClass('active');
+              $(this).closest('.hover-listing-image').find('.listing-item:first-child').addClass('active');
+              $(this).closest('.hover-listing-image').find('.bullet-hover-listing .bl-item:first-child').addClass('active');
+          }
+      )
+  });
+  }
   var getOneTabStr = function (name) {
     var name1 = name.replace(" ", "-");
     return `<a class="filter-listing ${
