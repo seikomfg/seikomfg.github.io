@@ -355,10 +355,10 @@
       delay: 0,
       disableOnInteraction: false,
     },
-    slidesPerView: 2,
+    slidesPerView: 1,
     loop: true,
     spaceBetween: 30,
-    speed: 10000,
+    speed: 15000,
     observer: true,
     observeParents: true,
     pagination: {
@@ -379,7 +379,7 @@
         spaceBetween: 30,
       },
       992: {
-        slidesPerView: 3,
+        slidesPerView: 4,
         spaceBetween: 30,
       },
     },
@@ -397,6 +397,7 @@
       banner,
       view,
     } = item;
+
     return `<div class="item">
             <div class="listing-post">
                 <div class="featured-property">
@@ -415,7 +416,7 @@
                     <div class="listing-images">
                         <div class="hover-listing-image">
                             <div class="wrap-hover-listing">
-                                <div class="listing-item">
+                                <div class="listing-item active">
                                     <div class="images">
                                         <img decoding="async"
                                             src="${banner[0]}"
@@ -458,7 +459,7 @@
                                     </div>
                                 </div>
                                 <div class="bullet-hover-listing">
-                                    <div class="bl-item"></div>
+                                    <div class="bl-item active"></div>
                                     <div class="bl-item"></div>
                                     <div class="bl-item"></div>
                                     <div class="bl-item"></div>
