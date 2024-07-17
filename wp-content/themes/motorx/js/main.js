@@ -386,6 +386,22 @@
   });
 
   var getOneItem = function (item) {
+    //   <li
+    //   class="listing-information transmission">
+    //   <div class="inner">
+    //       <span
+    //         class="my-span">minimum</span>
+    //       <p>${minimum}</p>
+    //   </div>
+    // </li>
+
+    // <div class="bottom-content">
+    //   <div class="button-details">
+    //     <a href="/carheadlights/${title}">
+    //       detail<i class="icon-seikomfg-readmore"></i>
+    //     </a>
+    //   </div>
+    // </div>;
     var {
       id,
       title,
@@ -403,15 +419,18 @@
                 <div class="featured-property">
                     <div class="group-meta">
                         <div class="inner">
-                            <span
-                                class="count-list-gallery view-gallery"
-                                data-mfp-event
-                                data-gallery="${banner}"><img
-                                    src="/wp-content/plugins/tf-car-listing/includes/elementor-widget/assets/images/icons/camera.svg"
-                                    alt="icon-map">${banner.length}</span>
+                            <span class="my-count-list-gallery">
+                              <img src="/wp-content/plugins/tf-car-listing/includes/elementor-widget/assets/images/icons/camera.svg" alt="icon-map">${banner.length} 
+                            </span>
+                            <span class="my-count-list-gallery">
+                              <i class="icon-seikomfg-open-eye"></i>${view}
+                            </span>
+                                    
                         </div>
-                        <span class="date-car"><i
-                                class="icon-seikomfg-open-eye"></i>${view}</span>
+                          <div class="button-details my-button-details">
+                            <a href="/carheadlights/${title}">detail<i
+                                    class="icon-seikomfg-readmore"></i></a>
+                        </div>
                     </div>
                     <div class="listing-images">
                         <div class="hover-listing-image">
@@ -440,22 +459,12 @@
                                             alt="images">
                                     </div>
                                 </div>
-                                <div class="listing-item view-gallery"
-                                    data-mfp-event
-                                    data-gallery="${banner}"
-                                    title="${title}">
+                                <div class="listing-item">
                                     <div class="images">
                                         <img decoding="async"
                                             src="${banner[3]}"
-                                            class="swiper-image tfcl-light-gallery"
+                                            class="swiper-image lazy tfcl-light-gallery"
                                             alt="images">
-                                        <div class="overlay-limit">
-                                            <img decoding="async"
-                                                src="/wp-content/plugins/tf-car-listing/includes/elementor-widget/assets/images/icons/picture.svg"
-                                                class="icon-img"
-                                                alt="icon-map">
-                                            <p>1 more photos</p>
-                                        </div>
                                     </div>
                                 </div>
                                 <div class="bullet-hover-listing">
@@ -472,7 +481,7 @@
                 <div class="content">
                     <h3 class="title">
                         <a class="title-a"
-                            href="/carheadlights/detail/${title}">${title}</a>
+                            href="/carheadlights/${title}">${title}</a>
                     </h3>
                     <div class="description">
                         <ul>
@@ -495,78 +504,125 @@
                                 class="listing-information transmission">
                                 <div class="inner">
                                     <span
-                                      class="my-span">minimum</span>
-                                    <p>${minimum}</p>
-                                </div>
-                            </li>
-                            <li
-                                class="listing-information transmission">
-                                <div class="inner">
-                                    <span
                                       class="my-span">Trade Mode</span>
                                     <p>${trade_mode}</p>
                                 </div>
                             </li>
                         </ul>
                     </div>
-                    <div class="bottom-content">
-                        <div class="button-details">
-                            <a href="/carheadlights/detail/${title}">detail<i
-                                    class="icon-seikomfg-readmore"></i></a>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>`;
   };
   window.huancunList = [];
-  var initCarheadlightsList = function (catagory, page) {
-    var currentDoms = ''
-    var pageSize = 6;
+  window.pageSize = 3;
+  function calculatePages() {
+    // 计算总页数
+    const totalPages = Math.ceil(window.huancunList.length / pageSize);
+    return totalPages;
+  }
+  var getOnePagination = function(n,pageNum){
+    return `<span aria-current="page" class="page-numbers ${n == pageNum ? 'current' : ''}">${n}</span>`
+  }
+
+  var initpagination = function(pageNum){
+    pageNum = pageNum || 1
+    var totalPages = calculatePages()
+    var pagination = ''
+
+    
+    for(var i= 0;i<totalPages;i++){  
+      pagination = pagination + getOnePagination(i+1,pageNum)
+    }  
+    $('.my-paging-navigation').html($(pagination)).find('.page-numbers').on("click", function (e) {
+      e.preventDefault();
+      // 更新页码当前激活的状态
+      $(this)
+        .addClass("class", "current")
+        .siblings()
+        .remove("class", "current");
+        //传入当前激活页码值
+        initCarheadlightsList(null,$(this).text())
+    });
+
+
+  }
+
+  var initCarheadlightsList = function (catagory, pageNum) {
+    var currentDoms = "";
     var currentList = [];
 
-    if (catagory) {// 点选分类时,重新获取总缓存列表数据
-      var templatWrapper = $("template");
+    if (catagory) {
+      // 点选分类时,重新获取总缓存列表数据
       window.huancunList = [];
       window.goodsdata.carheadlights.forEach(function (ii) {
         if (ii.catagory.includes(catagory)) {
           window.huancunList.push(ii);
         }
-      })
+      });
     }
-    console.log(catagory, page,window.huancunList)
-    page = page || 1;
-    currentList = window.huancunList.slice((page - 1) * pageSize,page * pageSize);
+    // console.log(catagory, pageNum, window.huancunList);
+    pageNum = pageNum || 1;
+    currentList = window.huancunList.slice(
+      (pageNum - 1) * pageSize,
+      pageNum * pageSize
+    );
     var items = "";
     currentList.forEach(function (i) {
-        items = items + getOneItem(i);
+      items = items + getOneItem(i);
     });
     currentDoms = $(items);
 
     $("#carheadlights .listing").html(currentDoms);
 
-    $('.hover-listing-image').each(function () {
-      $(this).find('.listing-item:first-child').addClass('active');
-      $(this).find('.bullet-hover-listing .bl-item:first-child').addClass('active');
+    $(".hover-listing-image").each(function () {
+      $(this).find(".listing-item:first-child").addClass("active");
+      $(this)
+        .find(".bullet-hover-listing .bl-item:first-child")
+        .addClass("active");
 
-      $(this).find('.listing-item').hover(
+      $(this)
+        .find(".listing-item")
+        .hover(
           function () {
-              var index = $(this).index();
-              $(this).closest('.hover-listing-image').find('.listing-item').removeClass('active');
-              $(this).addClass("active");
+            var index = $(this).index();
+            $(this)
+              .closest(".hover-listing-image")
+              .find(".listing-item")
+              .removeClass("active");
+            $(this).addClass("active");
 
-              $(this).closest('.hover-listing-image').find('.bl-item').removeClass('active');
-              $(this).closest('.hover-listing-image').find('.bl-item').eq(index).addClass('active');
+            $(this)
+              .closest(".hover-listing-image")
+              .find(".bl-item")
+              .removeClass("active");
+            $(this)
+              .closest(".hover-listing-image")
+              .find(".bl-item")
+              .eq(index)
+              .addClass("active");
           },
           function () {
-              $(this).removeClass("active");
-              $(this).closest('.hover-listing-image').find('.bl-item').removeClass('active');
-              $(this).closest('.hover-listing-image').find('.listing-item:first-child').addClass('active');
-              $(this).closest('.hover-listing-image').find('.bullet-hover-listing .bl-item:first-child').addClass('active');
+            $(this).removeClass("active");
+            $(this)
+              .closest(".hover-listing-image")
+              .find(".bl-item")
+              .removeClass("active");
+            $(this)
+              .closest(".hover-listing-image")
+              .find(".listing-item:first-child")
+              .addClass("active");
+            $(this)
+              .closest(".hover-listing-image")
+              .find(".bullet-hover-listing .bl-item:first-child")
+              .addClass("active");
           }
-      )
-  });
-  }
+        );
+    });
+
+    initpagination(pageNum)
+  };
   var getOneTabStr = function (name) {
     var name1 = name.replace(" ", "-");
     return `<a class="filter-listing ${
@@ -580,12 +636,13 @@
     });
     var tabsDom = $(tabs);
     // 更新商品列表
-    initCarheadlightsList('All', 1);
+    initCarheadlightsList("All", 1);
 
     $("#carheadlights .my-filter-bar")
       .append(tabsDom)
       .find(".filter-listing")
       .on("click", function (e) {
+        e.preventDefault();
         // 更新tabbar当前激活的tab
         $(this)
           .attr("class", "filter-listing active")

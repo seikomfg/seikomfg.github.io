@@ -102,6 +102,23 @@
                 "/wp-content/uploads/2024/01/carr-34-1.webp"
             ],
             "view":1734
+        },
+        {
+            "id":"9005",
+            "title":"9005",
+            "catagory":["All","Hot","Halogen-Headlamp-Bulb"],
+            "power":"custom",
+            "packaging":"custom",
+            "minimum":200,
+            "trade_mode":"FOB",
+            "banner":[
+                "/wp-content/uploads/2024/01/carr-32-1.webp",
+                "/wp-content/uploads/2024/01/crr-13-1.webp",
+                "/wp-content/uploads/2024/01/carr-31-3.webp",
+                "/wp-content/uploads/2024/01/carr-57-1.webp",
+                "/wp-content/uploads/2024/01/carr-34-1.webp"
+            ],
+            "view":1934
         }
     ]
 }
