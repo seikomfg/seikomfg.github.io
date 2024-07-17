@@ -11607,3 +11607,6 @@ abc{
 .elementor-2396 .elementor-element.elementor-element-7200933.elementor-element{
   width: 100%;
 }
+.page-numbers{
+  cursor: pointer;
+}

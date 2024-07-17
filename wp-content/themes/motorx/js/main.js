@@ -516,7 +516,7 @@
         </div>`;
   };
   window.huancunList = [];
-  window.pageSize = 3;
+  window.pageSize = 6;
   function calculatePages() {
     // 计算总页数
     const totalPages = Math.ceil(window.huancunList.length / pageSize);
@@ -525,7 +525,27 @@
   var getOnePagination = function(n,pageNum){
     return `<span aria-current="page" class="page-numbers ${n == pageNum ? 'current' : ''}">${n}</span>`
   }
+  function getElementTop(elem){
 
+    　　var elemTop=elem.offsetTop;//获得elem元素距相对定位的父元素的top
+    
+    　　elem=elem.offsetParent;//将elem换成起相对定位的父元素
+    
+    　　while(elem!=null){//只要还有相对定位的父元素 
+    
+    　　　　//获得父元素 距他父元素的top值,累加到结果中
+    
+    　　　　elemTop+=elem.offsetTop;
+    
+    　　　　//再次将elem换成他相对定位的父元素上;
+    
+    　　　　elem=elem.offsetParent;
+    
+    　　}
+    
+    　　return elemTop;
+    
+    }
   var initpagination = function(pageNum){
     pageNum = pageNum || 1
     var totalPages = calculatePages()
@@ -544,6 +564,12 @@
         .remove("class", "current");
         //传入当前激活页码值
         initCarheadlightsList(null,$(this).text())
+
+        // 获取商品列表上边界所在高度，滚动到原来高度
+        var myElement = document.querySelector('.listing.row');
+        console.log(myElement.getBoundingClientRect(),myElement)
+        var scrollHeight =  getElementTop(myElement)
+        $("html, body").animate({ scrollTop: scrollHeight - 100 }, 0);
     });
 
 
