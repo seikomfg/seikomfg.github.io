@@ -676,6 +676,12 @@
           .attr("class", "filter-listing");
         // 更新商品列表
         initCarheadlightsList($(this).attr("data-slug"), 1);
+
+        // 获取商品列表上边界所在高度，滚动到原来高度
+        var myElement = document.querySelector('.listing.row');
+        console.log(myElement.getBoundingClientRect(),myElement)
+        var scrollHeight =  getElementTop(myElement)
+        $("html, body").animate({ scrollTop: scrollHeight - 100 }, 0);
       });
   };
 

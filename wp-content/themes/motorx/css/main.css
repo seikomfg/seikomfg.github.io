@@ -11505,10 +11505,6 @@ button:hover,
 }
 
 
-.tf-title-section .title-section h3.heading {
-  font-size: 48px;
-}
-
 .elementor-2396 .elementor-element.elementor-element-22cd1a7 .tf-title-section .title-section h1.heading{
   font-size: 50px;
 }
@@ -11540,7 +11536,11 @@ button:hover,
     flex-wrap: wrap;
   }
 }
-
+@media only screen and (max-width: 768px){
+  .elementor-3232 .elementor-element.elementor-element-bcd1f28.elementor-element{
+    padding-top: 40px;
+  }
+}
 .my-more{
   align-self: center;
 }
@@ -11609,4 +11609,7 @@ abc{
 }
 .page-numbers{
   cursor: pointer;
+}
+.elementor-3232 .elementor-element.elementor-element-c3233c2{
+  padding-right: 40px;
 }
