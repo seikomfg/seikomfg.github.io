@@ -11625,3 +11625,11 @@ abc{
   align-items: center;
   margin-bottom: 17px !important;
 }
+@media only screen and (max-width: 768px) {
+  .elementor-2396 .elementor-element.elementor-element-091d843 > .elementor-widget-container{
+    margin-bottom: 20px !important;
+  }
+  .my-filter-bar {
+    margin-bottom: 0 !important;
+  }
+}
