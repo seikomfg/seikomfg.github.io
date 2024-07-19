@@ -685,7 +685,9 @@
     });
   }
 
-  $('.footerlink').click(function(){
+  $('.footerlink').click(function(e){
+    e.stopPropagation();
+    e.preventDefault()
     var self = this
     // 触发分类标签按钮点击
     var tagetTab = $("#carheadlights .my-filter-bar").find(".filter-listing").filter(function(){
