@@ -1,10 +1,10 @@
 {
-    "catagory":["All","Hot","New","Max-Repurchase","Led-Headlight-Bulb","Halogen-Headlamp-Bulb"],
+    "catagory":["All","Hot","New","Max Repurchase","Led Headlight Bulb","Halogen Headlamp Bulb"],
     "carheadlights" : [
         {
             "id":"H3",
             "title":"H3",
-            "catagory":["All","New","Halogen-Headlamp-Bulb"],
+            "catagory":["All","New","Halogen Headlamp Bulb"],
             "power":"custom",
             "packaging":"custom",
             "minimum":200,
@@ -21,7 +21,7 @@
         {
             "id":"H4",
             "title":"H4",
-            "catagory":["All","Hot","Halogen-Headlamp-Bulb"],
+            "catagory":["All","Hot","Halogen Headlamp Bulb"],
             "power":"custom",
             "packaging":"custom",
             "minimum":200,
@@ -38,7 +38,7 @@
         {
             "id":"H7",
             "title":"H7",
-            "catagory":["All","Max-Repurchase","Halogen-Headlamp-Bulb"],
+            "catagory":["All","Max Repurchase","Halogen Headlamp Bulb"],
             "power":"custom",
             "packaging":"custom",
             "minimum":200,
@@ -55,7 +55,7 @@
         {
             "id":"D1",
             "title":"D1",
-            "catagory":["All","Max-Repurchase","Led-Headlight-Bulb"],
+            "catagory":["All","Max Repurchase","Led Headlight Bulb"],
             "power":"custom",
             "packaging":"custom",
             "minimum":200,
@@ -72,7 +72,7 @@
         {
             "id":"D2",
             "title":"D2",
-            "catagory":["All","Hot","Led-Headlight-Bulb"],
+            "catagory":["All","Hot","Led Headlight Bulb"],
             "power":"custom",
             "packaging":"custom",
             "minimum":200,
@@ -89,7 +89,7 @@
         {
             "id":"D4",
             "title":"D4",
-            "catagory":["All","New","Led-Headlight-Bulb"],
+            "catagory":["All","New","Led Headlight Bulb"],
             "power":"custom",
             "packaging":"custom",
             "minimum":200,
@@ -106,7 +106,7 @@
         {
             "id":"9005",
             "title":"9005",
-            "catagory":["All","Hot","Halogen-Headlamp-Bulb"],
+            "catagory":["All","Hot","Halogen Headlamp Bulb"],
             "power":"custom",
             "packaging":"custom",
             "minimum":200,

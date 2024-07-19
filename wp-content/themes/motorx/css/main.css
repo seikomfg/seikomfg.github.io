@@ -11521,7 +11521,7 @@ button:hover,
     margin-right: 24px;
 }
 
-@media only screen and (max-width: 999px){
+@media only screen and (max-width: 1110px){
   .themesflat-top.style-01.myheader {
     display:none
   }
@@ -11610,6 +11610,17 @@ abc{
 .page-numbers{
   cursor: pointer;
 }
-.elementor-3232 .elementor-element.elementor-element-c3233c2{
+.e-con.e-con>.e-con-inner>.my-elementor-widget, .elementor.elementor .e-con>.my-elementor-widget{
   padding-right: 40px;
+}
+@media only screen and (max-width: 768px) {
+  .home-top-e-con-inner{
+    padding-top: 30px !important;
+  }
+}
+.tf-listing-wrap.style1 .wrap-listing-post .item .listing-post .content .my-title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 17px !important;
 }

@@ -245,7 +245,7 @@
           header.removeClass("fixed-show");
           injectSpace.hide();
         }
-        if ($(window).scrollTop() > 72) {
+        if ($(window).scrollTop() > 0) {
           header.addClass("header-sticky");
           $(".header-sticky").css("top", wpadminbar);
         } else {
@@ -386,22 +386,6 @@
   });
 
   var getOneItem = function (item) {
-    //   <li
-    //   class="listing-information transmission">
-    //   <div class="inner">
-    //       <span
-    //         class="my-span">minimum</span>
-    //       <p>${minimum}</p>
-    //   </div>
-    // </li>
-
-    // <div class="bottom-content">
-    //   <div class="button-details">
-    //     <a href="/carheadlights/${title}">
-    //       detail<i class="icon-seikomfg-readmore"></i>
-    //     </a>
-    //   </div>
-    // </div>;
     var {
       id,
       title,
@@ -421,16 +405,13 @@
                         <div class="inner">
                             <span class="my-count-list-gallery">
                               <img src="/wp-content/plugins/tf-car-listing/includes/elementor-widget/assets/images/icons/camera.svg" alt="icon-map">${banner.length} 
-                            </span>
+                            </span>    
+                        </div>
+                         <div class="inner">
                             <span class="my-count-list-gallery">
                               <i class="icon-seikomfg-open-eye"></i>${view}
-                            </span>
-                                    
-                        </div>
-                          <div class="button-details my-button-details">
-                            <a href="/carheadlights/${title}">detail<i
-                                    class="icon-seikomfg-readmore"></i></a>
-                        </div>
+                            </span> 
+                          </div>
                     </div>
                     <div class="listing-images">
                         <div class="hover-listing-image">
@@ -479,9 +460,14 @@
 
                 </div>
                 <div class="content">
-                    <h3 class="title">
+                    <h3 class="title my-title">
                         <a class="title-a"
                             href="/carheadlights/${title}">${title}</a>
+
+                            <div class="button-details my-button-details">
+                            <a href="/carheadlights/${title}">detail<i
+                                    class="icon-seikomfg-readmore"></i></a>
+                        </div>
                     </h3>
                     <div class="description">
                         <ul>
@@ -567,7 +553,7 @@
 
         // 获取商品列表上边界所在高度，滚动到原来高度
         var myElement = document.querySelector('.listing.row');
-        console.log(myElement.getBoundingClientRect(),myElement)
+        // console.log(myElement.getBoundingClientRect(),myElement)
         var scrollHeight =  getElementTop(myElement)
         $("html, body").animate({ scrollTop: scrollHeight - 100 }, 0);
     });
@@ -675,11 +661,11 @@
           .siblings()
           .attr("class", "filter-listing");
         // 更新商品列表
-        initCarheadlightsList($(this).attr("data-slug"), 1);
+        initCarheadlightsList($(this).text(), 1);
 
         // 获取商品列表上边界所在高度，滚动到原来高度
         var myElement = document.querySelector('.listing.row');
-        console.log(myElement.getBoundingClientRect(),myElement)
+        // console.log(myElement.getBoundingClientRect(),myElement)
         var scrollHeight =  getElementTop(myElement)
         $("html, body").animate({ scrollTop: scrollHeight - 100 }, 0);
       });
@@ -687,7 +673,6 @@
 
   // 初始化商品数据
   if (!window.goodsdata) {
-    console.log($);
     $.ajax({
       url: "./database/data.json",
       success: function (result) {
@@ -699,6 +684,15 @@
       },
     });
   }
+
+  $('.footerlink').click(function(){
+    var self = this
+    // 触发分类标签按钮点击
+    var tagetTab = $("#carheadlights .my-filter-bar").find(".filter-listing").filter(function(){
+      return $(this).text() == $(self).text()
+    })
+    tagetTab.click()
+  })
 
   // Dom Ready
   $(function () {
