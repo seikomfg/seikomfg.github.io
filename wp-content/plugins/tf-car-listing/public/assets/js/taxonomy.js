@@ -37,7 +37,7 @@
                 $('.group-card-item-listing').empty();
                 if (response.html != '') {
                     $('.group-card-item-listing').html(response.html);
-                    $('.pagination-wrap').css('display', 'none');
+                    // $('.pagination-wrap').css('display', 'none');
                 }
 
                 if (response.message != '') {

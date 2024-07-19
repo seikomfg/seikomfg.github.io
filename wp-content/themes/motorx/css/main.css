@@ -11633,3 +11633,12 @@ abc{
     margin-bottom: 0 !important;
   }
 }
+.my-group-header-logo{
+  margin-bottom: 0 !important;
+  height: 90px;
+}
+@media only screen and (max-width: 1170px){
+  #themesflat-content{
+    /* padding-top: 0px !important; */
+  }
+}

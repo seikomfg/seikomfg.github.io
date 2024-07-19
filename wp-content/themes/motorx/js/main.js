@@ -502,64 +502,72 @@
         </div>`;
   };
   window.huancunList = [];
-  window.pageSize = 6;
+  window.pageSize = 3;
   function calculatePages() {
     // 计算总页数
     const totalPages = Math.ceil(window.huancunList.length / pageSize);
     return totalPages;
   }
-  var getOnePagination = function(n,pageNum){
-    return `<span aria-current="page" class="page-numbers ${n == pageNum ? 'current' : ''}">${n}</span>`
-  }
-  function getElementTop(elem){
+  var getOnePagination = function (n, pageNum) {
+    return `<span aria-current="page" class="page-numbers ${
+      n == pageNum ? "current" : ""
+    }">${n}</span>`;
+  };
+  function getElementTop(elem) {
+    var elemTop = elem.offsetTop; //获得elem元素距相对定位的父元素的top
 
-    　　var elemTop=elem.offsetTop;//获得elem元素距相对定位的父元素的top
-    
-    　　elem=elem.offsetParent;//将elem换成起相对定位的父元素
-    
-    　　while(elem!=null){//只要还有相对定位的父元素 
-    
-    　　　　//获得父元素 距他父元素的top值,累加到结果中
-    
-    　　　　elemTop+=elem.offsetTop;
-    
-    　　　　//再次将elem换成他相对定位的父元素上;
-    
-    　　　　elem=elem.offsetParent;
-    
-    　　}
-    
-    　　return elemTop;
-    
+    elem = elem.offsetParent; //将elem换成起相对定位的父元素
+
+    while (elem != null) {
+      //只要还有相对定位的父元素
+
+      //获得父元素 距他父元素的top值,累加到结果中
+
+      elemTop += elem.offsetTop; //再次将elem换成他相对定位的父元素上;
+
+      elem = elem.offsetParent;
     }
-  var initpagination = function(pageNum){
-    pageNum = pageNum || 1
-    var totalPages = calculatePages()
-    var pagination = ''
 
-    
-    for(var i= 0;i<totalPages;i++){  
-      pagination = pagination + getOnePagination(i+1,pageNum)
-    }  
-    $('.my-paging-navigation').html($(pagination)).find('.page-numbers').on("click", function (e) {
-      e.preventDefault();
-      // 更新页码当前激活的状态
-      $(this)
-        .addClass("class", "current")
-        .siblings()
-        .remove("class", "current");
-        //传入当前激活页码值
-        initCarheadlightsList(null,$(this).text())
-
-        // 获取商品列表上边界所在高度，滚动到原来高度
-        var myElement = document.querySelector('.my-filter-bar');
-        
-        var scrollHeight =  getElementTop(myElement)
-        $("html, body").animate({ scrollTop: scrollHeight - 80 }, 0);
-    });
-
-
+    return elemTop;
   }
+  var initpagination = function (pageNum) {
+    pageNum = pageNum || 1;
+    var totalPages = calculatePages();
+    var pagination = "";
+
+    for (var i = 0; i < totalPages; i++) {
+      pagination = pagination + getOnePagination(i + 1, pageNum);
+    }
+    $(".my-paging-navigation")
+      .html($(pagination))
+      .find(".page-numbers")
+      .on("click", function (e) {
+        var wrapperDom1 = $("#carheadlights .my-filter-bar")
+        var wrapperDom2 = $(".my-condition-tab-wrap")
+        e.preventDefault();
+        // 更新页码当前激活的状态
+        $(this)
+          .addClass("class", "current")
+          .siblings()
+          .remove("class", "current");
+        //传入当前激活页码值
+        initCarheadlightsList(null, $(this).text());
+
+        if(wrapperDom1 && wrapperDom1.length){
+          // 获取商品列表上边界所在高度，滚动到原来高度
+          var myElement = document.querySelector("#carheadlights .my-filter-bar");
+
+          var scrollHeight = getElementTop(myElement);
+          $("html, body").animate({ scrollTop: scrollHeight - 80 }, 0);
+        }else if(wrapperDom2 && wrapperDom2.length){
+          // 获取商品列表上边界所在高度，滚动到原来高度
+          var myElement = document.querySelector(".my-condition-tab-wrap");
+
+          var scrollHeight = getElementTop(myElement);
+          $("html, body").animate({ scrollTop: scrollHeight - 160 }, 0);
+        }
+      });
+  };
 
   var initCarheadlightsList = function (catagory, pageNum) {
     var currentDoms = "";
@@ -633,7 +641,7 @@
         );
     });
 
-    initpagination(pageNum)
+    initpagination(pageNum);
   };
   var getOneTabStr = function (name) {
     var name1 = name.replace(" ", "-");
@@ -641,17 +649,25 @@
       name == "All" ? "active" : ""
     }" data-slug="${name1}" data-tooltip="${name1}">${name}</a>`;
   };
+  var getOneTabStr2 = function (name) {
+    var name1 = name.replace(" ", "-");
+    return `<a data-value="all" class="btn-condition-filter ${
+      name == "All" ? "active" : ""
+    }">${name}</a>`;
+  };
   var initCarheadlightsTabs = function () {
-    var tabs = "";
-    window.goodsdata.catagory.forEach(function (i) {
-      tabs = tabs + getOneTabStr(i);
-    });
-    var tabsDom = $(tabs);
-    // 更新商品列表
-    initCarheadlightsList("All", 1);
+    var wrapperDom1 = $("#carheadlights .my-filter-bar")
+    var wrapperDom2 = $(".my-condition-tab-wrap")
+    if(wrapperDom1 && wrapperDom1.length){
+      var tabs = "";
+      window.goodsdata.catagory.forEach(function (i) {
+        tabs = tabs + getOneTabStr(i);
+      });
+      var tabsDom = $(tabs);
+      // 更新商品列表
+      initCarheadlightsList("All", 1);
 
-    $("#carheadlights .my-filter-bar")
-      .append(tabsDom)
+      wrapperDom1 .append(tabsDom)
       .find(".filter-listing")
       .on("click", function (e) {
         e.preventDefault();
@@ -664,38 +680,197 @@
         initCarheadlightsList($(this).text(), 1);
 
         // 获取商品列表上边界所在高度，滚动到原来高度
-        var myElement = document.querySelector('.my-filter-bar');
-        
-        var scrollHeight =  getElementTop(myElement)
+        var myElement = document.querySelector(".my-filter-bar");
+
+        var scrollHeight = getElementTop(myElement);
         $("html, body").animate({ scrollTop: scrollHeight - 80 }, 0);
       });
+    }else if(wrapperDom2 && wrapperDom2.length){
+      
+      var tabs = "";
+      window.goodsdata.catagory.forEach(function (i) {
+        tabs = tabs + getOneTabStr2(i);
+      });
+      var tabsDom = $(tabs);
+      // 更新商品列表
+      initCarheadlightsList("All", 1);
+
+      wrapperDom2.append(tabsDom)
+      .find(".btn-condition-filter")
+      .on("click", function (e) {
+        e.preventDefault();
+        // 更新tabbar当前激活的tab
+        $(this)
+          .attr("class", "btn-condition-filter active")
+          .siblings()
+          .attr("class", "btn-condition-filter");
+        // 更新商品列表
+        initCarheadlightsList($(this).text(), 1);
+
+        // 获取商品列表上边界所在高度，滚动到原来高度
+        var myElement = document.querySelector(".my-condition-tab-wrap");
+
+        var scrollHeight = getElementTop(myElement);
+        $("html, body").animate({ scrollTop: scrollHeight - 160 }, 0);
+      });
+    
+    }
   };
 
   // 初始化商品数据
-  if (!window.goodsdata) {
-    $.ajax({
-      url: "./database/data.json",
-      success: function (result) {
-        window.goodsdata = result;
-        window.goodsdata &&
-          window.goodsdata.carheadlights &&
-          window.goodsdata.carheadlights.length &&
-          initCarheadlightsTabs();
+  window.goodsdata = {
+    catagory: [
+      "All",
+      "Hot",
+      "New",
+      "Max Repurchase",
+      "Led Headlight Bulb",
+      "Halogen Headlamp Bulb",
+    ],
+    carheadlights: [
+      {
+        id: "H3",
+        title: "H3",
+        catagory: ["All", "New", "Halogen Headlamp Bulb"],
+        power: "custom",
+        packaging: "custom",
+        minimum: 200,
+        trade_mode: "FOB",
+        banner: [
+          "/wp-content/uploads/2024/01/carr-32-1.webp",
+          "/wp-content/uploads/2024/01/crr-13-1.webp",
+          "/wp-content/uploads/2024/01/carr-31-3.webp",
+          "/wp-content/uploads/2024/01/carr-57-1.webp",
+          "/wp-content/uploads/2024/01/carr-34-1.webp",
+        ],
+        view: 1734,
       },
-    });
-  }
-
-  $('.footerlink').click(function(e){
+      {
+        id: "H4",
+        title: "H4",
+        catagory: ["All", "Hot", "Halogen Headlamp Bulb"],
+        power: "custom",
+        packaging: "custom",
+        minimum: 200,
+        trade_mode: "FOB",
+        banner: [
+          "/wp-content/uploads/2024/01/carr-32-1.webp",
+          "/wp-content/uploads/2024/01/crr-13-1.webp",
+          "/wp-content/uploads/2024/01/carr-31-3.webp",
+          "/wp-content/uploads/2024/01/carr-57-1.webp",
+          "/wp-content/uploads/2024/01/carr-34-1.webp",
+        ],
+        view: 1734,
+      },
+      {
+        id: "H7",
+        title: "H7",
+        catagory: ["All", "Max Repurchase", "Halogen Headlamp Bulb"],
+        power: "custom",
+        packaging: "custom",
+        minimum: 200,
+        trade_mode: "FOB",
+        banner: [
+          "/wp-content/uploads/2024/01/carr-32-1.webp",
+          "/wp-content/uploads/2024/01/crr-13-1.webp",
+          "/wp-content/uploads/2024/01/carr-31-3.webp",
+          "/wp-content/uploads/2024/01/carr-57-1.webp",
+          "/wp-content/uploads/2024/01/carr-34-1.webp",
+        ],
+        view: 1734,
+      },
+      {
+        id: "D1",
+        title: "D1",
+        catagory: ["All", "Max Repurchase", "Led Headlight Bulb"],
+        power: "custom",
+        packaging: "custom",
+        minimum: 200,
+        trade_mode: "FOB",
+        banner: [
+          "/wp-content/uploads/2024/01/carr-32-1.webp",
+          "/wp-content/uploads/2024/01/crr-13-1.webp",
+          "/wp-content/uploads/2024/01/carr-31-3.webp",
+          "/wp-content/uploads/2024/01/carr-57-1.webp",
+          "/wp-content/uploads/2024/01/carr-34-1.webp",
+        ],
+        view: 1734,
+      },
+      {
+        id: "D2",
+        title: "D2",
+        catagory: ["All", "Hot", "Led Headlight Bulb"],
+        power: "custom",
+        packaging: "custom",
+        minimum: 200,
+        trade_mode: "FOB",
+        banner: [
+          "/wp-content/uploads/2024/01/carr-32-1.webp",
+          "/wp-content/uploads/2024/01/crr-13-1.webp",
+          "/wp-content/uploads/2024/01/carr-31-3.webp",
+          "/wp-content/uploads/2024/01/carr-57-1.webp",
+          "/wp-content/uploads/2024/01/carr-34-1.webp",
+        ],
+        view: 1734,
+      },
+      {
+        id: "D4",
+        title: "D4",
+        catagory: ["All", "New", "Led Headlight Bulb"],
+        power: "custom",
+        packaging: "custom",
+        minimum: 200,
+        trade_mode: "FOB",
+        banner: [
+          "/wp-content/uploads/2024/01/carr-32-1.webp",
+          "/wp-content/uploads/2024/01/crr-13-1.webp",
+          "/wp-content/uploads/2024/01/carr-31-3.webp",
+          "/wp-content/uploads/2024/01/carr-57-1.webp",
+          "/wp-content/uploads/2024/01/carr-34-1.webp",
+        ],
+        view: 1734,
+      },
+      {
+        id: "9005",
+        title: "9005",
+        catagory: ["All", "Hot", "Halogen Headlamp Bulb"],
+        power: "custom",
+        packaging: "custom",
+        minimum: 200,
+        trade_mode: "FOB",
+        banner: [
+          "/wp-content/uploads/2024/01/carr-32-1.webp",
+          "/wp-content/uploads/2024/01/crr-13-1.webp",
+          "/wp-content/uploads/2024/01/carr-31-3.webp",
+          "/wp-content/uploads/2024/01/carr-57-1.webp",
+          "/wp-content/uploads/2024/01/carr-34-1.webp",
+        ],
+        view: 1934,
+      },
+    ],
+  };
+  initCarheadlightsTabs();
+  $(".footerlink").click(function (e) {
     e.stopPropagation();
-    e.preventDefault()
-    var self = this
-    // 触发分类标签按钮点击
-    var tagetTab = $("#carheadlights .my-filter-bar").find(".filter-listing").filter(function(){
-      return $(this).text() == $(self).text()
-    })
-    tagetTab.click()
-  })
+    e.preventDefault();
+    var self = this;
 
+    var wrapperDom1 = $("#carheadlights .my-filter-bar")
+    var wrapperDom2 = $(".my-condition-tab-wrap")
+    if(wrapperDom1 && wrapperDom1.length){
+      var targetTab = wrapperDom1.find(".filter-listing")
+      .filter(function () {
+        return $(this).text() == $(self).text();
+      });
+      targetTab.click();
+    }else if(wrapperDom2 && wrapperDom2.length){
+      var targetTab = wrapperDom2.find(".btn-condition-filter")
+      .filter(function () {
+        return $(this).text() == $(self).text();
+      });
+      targetTab.click();
+    }
+  });
   // Dom Ready
   $(function () {
     Modal_Right();
