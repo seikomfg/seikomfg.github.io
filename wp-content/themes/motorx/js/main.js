@@ -552,10 +552,10 @@
         initCarheadlightsList(null,$(this).text())
 
         // 获取商品列表上边界所在高度，滚动到原来高度
-        var myElement = document.querySelector('.listing.row');
-        // console.log(myElement.getBoundingClientRect(),myElement)
+        var myElement = document.querySelector('.my-filter-bar');
+        
         var scrollHeight =  getElementTop(myElement)
-        $("html, body").animate({ scrollTop: scrollHeight - 100 }, 0);
+        $("html, body").animate({ scrollTop: scrollHeight - 80 }, 0);
     });
 
 
@@ -664,10 +664,10 @@
         initCarheadlightsList($(this).text(), 1);
 
         // 获取商品列表上边界所在高度，滚动到原来高度
-        var myElement = document.querySelector('.listing.row');
-        // console.log(myElement.getBoundingClientRect(),myElement)
+        var myElement = document.querySelector('.my-filter-bar');
+        
         var scrollHeight =  getElementTop(myElement)
-        $("html, body").animate({ scrollTop: scrollHeight - 100 }, 0);
+        $("html, body").animate({ scrollTop: scrollHeight - 80 }, 0);
       });
   };
 
