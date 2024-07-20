@@ -11575,6 +11575,12 @@ abc{
   color:var(--theme-primary-color)
 }
 
+.my-span{
+  color: #000 !important;
+}
+.my-p{
+  color:#a2a4a8 !important;
+}
 @media only screen and (max-width: 1200px) {
   .tf-listing-wrap .wrap-listing-post .item .listing-post .description ul li .inner span.my-span,
   .related-single-listing .tfcl-listing-card .infor-description li .inner span.my-span,

@@ -474,24 +474,17 @@
                             <li class="listing-information fuel">
                                 <div class="inner">
                                     <span
-                                        class="my-span">Packaging</span>
-                                    <p>${packaging}</p>
+                                        class="my-span">packaging&power</span>
+                                    <p class="my-p">${'customization'}</p>
                                 </div>
                             </li>
+                            
                             <li
                                 class="listing-information mileages">
                                 <div class="inner">
                                     <span
-                                        class="my-span">Power</span>
-                                    <p>${power}</p>
-                                </div>
-                            </li>
-                            <li
-                                class="listing-information transmission">
-                                <div class="inner">
-                                    <span
-                                      class="my-span">Trade Mode</span>
-                                    <p>${trade_mode}</p>
+                                        class="my-span">After-sales Service</span>
+                                    <p class="my-p">${'12months'}</p>
                                 </div>
                             </li>
                         </ul>
