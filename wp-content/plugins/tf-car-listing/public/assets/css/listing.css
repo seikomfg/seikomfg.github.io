@@ -222,7 +222,7 @@
     align-items: center;
     gap: 15px;
     justify-content: center;
-    margin-top: 60px;
+    /* margin-top: 60px; */
 }
 
 .tfcl-pagination span,
@@ -1060,7 +1060,7 @@
     }
 
     .tfcl-pagination {
-        margin-top: 30px;
+        /* margin-top: 30px; */
     }
 }
 

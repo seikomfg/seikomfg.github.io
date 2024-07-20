@@ -20,23 +20,23 @@ var advancedSearch = advancedSearch || {};
             this.onScrollFixed();
         },
         executeAdvancedSearch: function () {
-            $('.btn-condition-filter').on('click', function (e) {
-                e.preventDefault();
-                var currentCondition = $(this).siblings('#condition').val();
-                var currentUrl = window.location.href;
-                var conditionIndex = currentUrl.indexOf('condition=');
-                if (conditionIndex !== -1) {
-                    var existingCondition = currentUrl.substring(conditionIndex + 10).split('&')[0];
-                    if (existingCondition !== currentCondition) {
-                        var updatedUrl = currentUrl.replace('condition=' + existingCondition, 'condition=' + encodeURIComponent(currentCondition));
-                        history.pushState({ path: updatedUrl }, '', updatedUrl);
-                    }
-                } else {
-                    var separator = currentUrl.indexOf('?') !== -1 ? '&' : '?';
-                    var updatedUrl = currentUrl + separator + 'condition=' + encodeURIComponent(currentCondition);
-                    history.pushState({ path: updatedUrl }, '', updatedUrl);
-                }
-            })
+            // $('.btn-condition-filter').on('click', function (e) {
+            //     e.preventDefault();
+            //     var currentCondition = $(this).siblings('#condition').val();
+            //     var currentUrl = window.location.href;
+            //     var conditionIndex = currentUrl.indexOf('condition=');
+            //     if (conditionIndex !== -1) {
+            //         var existingCondition = currentUrl.substring(conditionIndex + 10).split('&')[0];
+            //         if (existingCondition !== currentCondition) {
+            //             var updatedUrl = currentUrl.replace('condition=' + existingCondition, 'condition=' + encodeURIComponent(currentCondition));
+            //             history.pushState({ path: updatedUrl }, '', updatedUrl);
+            //         }
+            //     } else {
+            //         var separator = currentUrl.indexOf('?') !== -1 ? '&' : '?';
+            //         var updatedUrl = currentUrl + separator + 'condition=' + encodeURIComponent(currentCondition);
+            //         history.pushState({ path: updatedUrl }, '', updatedUrl);
+            //     }
+            // })
 
             $('.tf-advanced-search-btn').on('click', function (e) {
                 e.preventDefault();

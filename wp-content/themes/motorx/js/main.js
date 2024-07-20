@@ -652,7 +652,7 @@
   var getOneTabStr2 = function (name) {
     var name1 = name.replace(" ", "-");
     return `<a data-value="all" class="btn-condition-filter ${
-      name == "All" ? "active" : ""
+      name == (sessionStorage.getItem('currentCatagory') || (!sessionStorage.getItem('currentCatagory') && "All")) ? "active" : ""
     }">${name}</a>`;
   };
   var initCarheadlightsTabs = function () {
@@ -693,7 +693,17 @@
       });
       var tabsDom = $(tabs);
       // 更新商品列表
-      initCarheadlightsList("All", 1);
+      initCarheadlightsList(sessionStorage.getItem('currentCatagory') || "All", 1);
+      if(sessionStorage.getItem('currentCatagory')){
+        // 获取商品列表上边界所在高度，滚动到原来高度
+        var myElement = document.querySelector(".my-condition-tab-wrap");
+  
+        var scrollHeight = getElementTop(myElement);
+        $("html, body").animate({ scrollTop: scrollHeight - 45 }, 0);
+        setTimeout(() => {
+          sessionStorage.setItem('currentCatagory','')
+        }, 1000);
+      }
 
       wrapperDom2.append(tabsDom)
       .find(".btn-condition-filter")
@@ -871,6 +881,17 @@
       targetTab.click();
     }
   });
+
+
+  $(".footerJump").click(function (e) {
+      e.stopPropagation();
+      e.preventDefault();
+      sessionStorage.setItem('currentCatagory',$(this).text())
+      window.location.href='/carheadlights'
+    });
+
+
+
   // Dom Ready
   $(function () {
     Modal_Right();
