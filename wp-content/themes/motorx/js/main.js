@@ -245,7 +245,7 @@
           header.removeClass("fixed-show");
           injectSpace.hide();
         }
-        if ($(window).scrollTop() > 0) {
+        if ($(window).scrollTop() > 500) {
           header.addClass("header-sticky");
           $(".header-sticky").css("top", wpadminbar);
         } else {
@@ -564,7 +564,7 @@
           var myElement = document.querySelector(".my-condition-tab-wrap");
 
           var scrollHeight = getElementTop(myElement);
-          $("html, body").animate({ scrollTop: scrollHeight - 160 }, 0);
+          $("html, body").animate({ scrollTop: scrollHeight - 45 }, 0);
         }
       });
   };
@@ -711,7 +711,7 @@
         var myElement = document.querySelector(".my-condition-tab-wrap");
 
         var scrollHeight = getElementTop(myElement);
-        $("html, body").animate({ scrollTop: scrollHeight - 160 }, 0);
+        $("html, body").animate({ scrollTop: scrollHeight - 45 }, 0);
       });
     
     }
