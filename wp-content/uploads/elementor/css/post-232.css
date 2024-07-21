@@ -400,8 +400,12 @@ body.elementor-page-232 #bottom {
 body.elementor-page-232 #themesflat-content {
   padding-top: 0px !important;
   padding-bottom: 0px !important;
-  margin-top: 0107px;
-  margin-bottom: 0px;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+.elementor-232 .elementor-element.elementor-element-7cb3407{
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
 }
 body.elementor-page-232 .page-title {
   display: block;
