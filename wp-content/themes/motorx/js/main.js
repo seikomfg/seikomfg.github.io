@@ -394,6 +394,7 @@
     return false
   }
   function getOneItem(item) {
+    
     var {
       id,
       title,
@@ -410,14 +411,13 @@
                 <div class="featured-property">
                     <div class="group-meta">
                         <div class="inner">
-                            <span class="my-count-list-gallery count-list-gallery view-gallery" >
+                            <span class="my-count-list-gallery count-list-gallery view-gallery" data-mfp-event>
                               <img src="/wp-content/plugins/tf-car-listing/includes/elementor-widget/assets/images/icons/camera.svg" alt="icon-map">${banner.length} 
                             </span>    
                         </div>
-                         
-
-
-
+                        <div class="button-details my-button-details" data-id="${id}">
+                          <a>detail<i class="icon-seikomfg-readmore"></i></a>
+                        </div>
                     </div>
                     <div class="listing-images">
                         <div class="hover-listing-image">
@@ -446,7 +446,7 @@
                                             alt="images">
                                     </div>
                                 </div>
-                                <div class="listing-item view-gallery data-mfp-event">
+                                <div class="listing-item">
                                     <div class="images">
                                         <img decoding="async"
                                             src="${banner[3]}"
@@ -465,13 +465,11 @@
                     </div>
 
                 </div>
-                <div class="content">
-                    <h3 class="title my-title my-detail-link" data-id="${id}">
+                <div class="content link-content" data-id="${id}">
+                    <h3 class="title my-title">
                         <a class="title-a">${title}</a>
 
-                            <div class="button-details my-button-details">
-                            <a>detail<i class="icon-seikomfg-readmore"></i></a>
-                        </div>
+                            
                     </h3>
                     <div class="description">
                         <ul>
@@ -638,11 +636,13 @@
         );
     });
 
-    // 给标题和detail按钮绑定点击跳转逻辑
-    $('.my-detail-link').on("click", function (e) {
+    // 给热区绑定点击跳转逻辑
+    $('.link-content').on("click", function (e) {
       window.jumpDetail(e,$(this).attr('data-id'))
     })
-
+    $('.my-button-details').on("click", function (e) {
+      window.jumpDetail(e,$(this).attr('data-id'))
+    })
     initpagination(pageNum);
   };
   window.getOneTabStr = function(name) {

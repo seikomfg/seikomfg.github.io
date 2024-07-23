@@ -11685,9 +11685,6 @@ abc{
 .my-reviews-inner{
   margin-bottom: 0 !important;
 }
-.my-detail-link{
-  cursor: pointer;
-}
 .listing-infor-box .icon-seikomfg-star.active::before {
   content: '\e942';
   color: var(--theme-primary-color);
@@ -11739,4 +11736,14 @@ abc{
 }
 .tf-listing-wrap .featured-property .count-list-gallery:hover{
   background:rgba(0, 0, 0, 0.81) !important;
+}
+.link-content{
+  cursor: pointer;
+}
+
+.my-listing-info-header{
+  display: flex !important;
+}
+.my-button-details{
+  cursor: pointer;
 }
