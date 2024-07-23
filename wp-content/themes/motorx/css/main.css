@@ -11705,3 +11705,38 @@ abc{
   color: var(--theme-primary-color) !important;
 
 }
+
+.related-title{
+  color: var(--theme-primary-color)
+}
+.related-description{
+  border-top: 1px solid #EFEFEF;
+}
+
+.related-card-content .listing-information{
+  justify-content: space-between !important;
+}
+.related-card-content .listing-information span{
+  color: #000 !important;
+  display: block !important;
+  text-align:left;
+}
+.tfcl-listing-card .infor-description{
+  flex-wrap: nowrap !important;;
+}
+.tfcl-listing-card .infor-description .inner{
+  margin-top: 0 !important;
+}
+.tfcl-listing-card .infor-description li{
+  white-space: nowrap;
+}
+.tfcl-listing-card .infor-description li p{
+  color:#a2a4a8 !important;
+  text-align:left;
+}
+.tfcl-listing-card .featured-property .group-meta .view-gallery:hover{
+  background:rgba(0, 0, 0, 0.81) !important;
+}
+.tf-listing-wrap .featured-property .count-list-gallery:hover{
+  background:rgba(0, 0, 0, 0.81) !important;
+}

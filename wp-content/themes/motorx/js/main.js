@@ -393,7 +393,7 @@
     window.location.href = `/carheadlights/${id}`;
     return false
   }
-  var getOneItem = function (item) {
+  function getOneItem(item) {
     var {
       id,
       title,
@@ -488,115 +488,7 @@
                                 <div class="inner">
                                     <span
                                         class="my-span">After-sales Service</span>
-                                    <p class="my-p">${'12months'}</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>`;
-  };
-  var getOneItemRelated = function (item) {
-    var {
-      id,
-      title,
-      catagory,
-      power,
-      packaging,
-      minimum,
-      trade_mode,
-      banner,
-      view,
-    } = item;
-
-    return `<div class="item">
-            <div class="listing-post">
-                <div class="featured-property">
-                    <div class="group-meta">
-                        <div class="inner">
-                            <span class="my-count-list-gallery">
-                              <img src="/wp-content/plugins/tf-car-listing/includes/elementor-widget/assets/images/icons/camera.svg" alt="icon-map">${banner.length} 
-                            </span>    
-                        </div>
-                         
-
-
-
-                    </div>
-                    <div class="listing-images">
-                        <div class="hover-listing-image">
-                            <div class="wrap-hover-listing">
-                                <div class="listing-item active">
-                                    <div class="images">
-                                        <img decoding="async"
-                                            src="${banner[0]}"
-                                            class="swiper-image lazy tfcl-light-gallery"
-                                            alt="images">
-                                    </div>
-                                </div>
-                                <div class="listing-item">
-                                    <div class="images">
-                                        <img decoding="async"
-                                            src="${banner[1]}"
-                                            class="swiper-image lazy tfcl-light-gallery"
-                                            alt="images">
-                                    </div>
-                                </div>
-                                <div class="listing-item">
-                                    <div class="images">
-                                        <img decoding="async"
-                                            src="${banner[2]}"
-                                            class="swiper-image lazy tfcl-light-gallery"
-                                            alt="images">
-                                    </div>
-                                </div>
-                                <div class="listing-item">
-                                    <div class="images">
-                                        <img decoding="async"
-                                            src="${banner[3]}"
-                                            class="swiper-image lazy tfcl-light-gallery"
-                                            alt="images">
-                                    </div>
-                                </div>
-                                <div class="bullet-hover-listing">
-                                    <div class="bl-item active"></div>
-                                    <div class="bl-item"></div>
-                                    <div class="bl-item"></div>
-                                    <div class="bl-item"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="content">
-                    <h3 class="title my-title">
-                        <a class="title-a"
-                            href="/carheadlights/${title}">${title}</a>
-
-                            <div class="button-details my-button-details">
-                            <a href="/carheadlights/${title}">detail<i
-                                    class="icon-seikomfg-readmore"></i></a>
-                        </div>
-                    </h3>
-                    <div class="description">
-                        <ul>
-                            <li class="listing-information fuel">
-                                <div class="inner">
-                                    <span
-                                        class="my-span">packaging&power</span>
-                                    <p class="my-p">${'customization'}</p>
-                                </div>
-                            </li>
-                            
-                            <li
-                                class="listing-information mileages">
-                                <div class="inner">
-                                    <span
-                                        class="my-span">After-sales Service</span>
-                                    <p class="my-p">${'12months'}</p>
+                                    <p class="my-p">${'12 months'}</p>
                                 </div>
                             </li>
                         </ul>
@@ -635,7 +527,7 @@
 
     return elemTop;
   }
-  var initpagination = function (pageNum) {
+  function initpagination(pageNum) {
     pageNum = pageNum || 1;
     var totalPages = calculatePages();
     var pagination = "";
@@ -674,7 +566,7 @@
       });
   };
 
-  var initCarheadlightsList = function (catagory, pageNum) {
+  window.initCarheadlightsList = function(catagory, pageNum) {
     var currentDoms = "";
     var currentList = [];
 
@@ -753,19 +645,19 @@
 
     initpagination(pageNum);
   };
-  var getOneTabStr = function (name) {
+  window.getOneTabStr = function(name) {
     var name1 = name.replace(" ", "-");
     return `<a class="filter-listing ${
       name == "All" ? "active" : ""
     }" data-slug="${name1}" data-tooltip="${name1}">${name}</a>`;
   };
-  var getOneTabStr2 = function (name) {
+  window.getOneTabStr2 = function(name) {
     var name1 = name.replace(" ", "-");
     return `<a data-value="all" class="btn-condition-filter ${
       name == (sessionStorage.getItem('currentCatagory') || (!sessionStorage.getItem('currentCatagory') && "All")) ? "active" : ""
     }">${name}</a>`;
   };
-  var initCarheadlightsTabs = function () {
+  window.initCarheadlightsTabs = function () {
     var wrapperDom1 = $("#carheadlights .my-filter-bar")
     var wrapperDom2 = $(".my-condition-tab-wrap")
     if(wrapperDom1 && wrapperDom1.length){
@@ -836,7 +728,6 @@
     
     }
   };
-
   // 初始化商品数据
   window.goodsdata = {
     catagory: [
@@ -850,6 +741,7 @@
     carheadlights: [
       {
         id: "H3",
+        index:1,
         title: "H3",
         catagory: ["All", "New", "Halogen Headlamp Bulb"],
         power: "custom",
@@ -867,9 +759,10 @@
       },
       {
         id: "LED.H4.Headlight.Bulb",
+        index:2,
         title: "LED H4 Headlight Bulb",
         catagory: ["All", "Hot", "Led Headlight Bulb"],
-        video:'https://youtu.be/vBtYtWlO8Kg?si=wkhCI63_l1XKhu9D',
+        video:'https://youtu.be/vBtYtWlO8Kg?si=J4WBT2Lk0eRUbQG5',
         banner: [
           "/wp-content/uploads/carheadlights/LED.H4.Headlight.Bulb/LED.H4.Headlight.Bulb-1.jpg",
           "/wp-content/uploads/carheadlights/LED.H4.Headlight.Bulb/LED.H4.Headlight.Bulb-1.jpg",
@@ -890,13 +783,16 @@
         specifications:{
           en:[
             {'Brand':`QiangRui`},
+            {'Raw Material':`Quartz/Tungsten/Al 6063`},
             {'Power':`55W/Customization`},
             {'Packaging':`Customization`},
+            {'Printing':'Lsaser/Ink/Customization'},
             {'Voltage':`12V/24V/Customization`},
             {'Light Source Model':`SMD Chips`},
             {'Color temperature':`6000/Customization`},
-            {'Heat Dissipation Theory':`Aviation Aluminum 6063`},
-            {'Operation Life':'>30000hrs'}
+            {'Operation Life':'>30000hrs'},
+            {'Trade Mode':'FOB'},
+            {'After-Sales Service':'12 months'}
           ]
         },
         features:{
@@ -910,6 +806,7 @@
       },
       {
         id: "Halogen-H4-Headlamp-Bulb",
+        index:3,
         title: "Halogen H4 Headlamp Bulb",
         catagory: ["All", "Hot", "Halogen Headlamp Bulb"],
         power: "custom",
@@ -927,6 +824,7 @@
       },
       {
         id: "H7",
+        index:4,
         title: "H7",
         catagory: ["All", "Max Repurchase", "Halogen Headlamp Bulb"],
         power: "custom",
@@ -944,6 +842,7 @@
       },
       {
         id: "D1",
+        index:5,
         title: "D1",
         catagory: ["All", "Max Repurchase", "Led Headlight Bulb"],
         power: "custom",
@@ -961,6 +860,7 @@
       },
       {
         id: "D2",
+        index:6,
         title: "D2",
         catagory: ["All", "Hot", "Led Headlight Bulb"],
         power: "custom",
@@ -978,6 +878,7 @@
       },
       {
         id: "D4",
+        index:7,
         title: "D4",
         catagory: ["All", "New", "Led Headlight Bulb"],
         power: "custom",
@@ -995,7 +896,42 @@
       },
       {
         id: "9005",
+        index:8,
         title: "9005",
+        catagory: ["All", "Hot", "Halogen Headlamp Bulb"],
+        power: "custom",
+        packaging: "custom",
+        minimum: 200,
+        trade_mode: "FOB",
+        banner: [
+          "/wp-content/uploads/2024/01/carr-32-1.webp",
+          "/wp-content/uploads/2024/01/crr-13-1.webp",
+          "/wp-content/uploads/2024/01/carr-31-3.webp",
+          "/wp-content/uploads/2024/01/carr-57-1.webp",
+          "/wp-content/uploads/2024/01/carr-34-1.webp",
+        ],
+        view: 1934,
+      },{
+        id: "9008",
+        index:9,
+        title: "9007",
+        catagory: ["All", "Hot", "Halogen Headlamp Bulb"],
+        power: "custom",
+        packaging: "custom",
+        minimum: 200,
+        trade_mode: "FOB",
+        banner: [
+          "/wp-content/uploads/2024/01/carr-32-1.webp",
+          "/wp-content/uploads/2024/01/crr-13-1.webp",
+          "/wp-content/uploads/2024/01/carr-31-3.webp",
+          "/wp-content/uploads/2024/01/carr-57-1.webp",
+          "/wp-content/uploads/2024/01/carr-34-1.webp",
+        ],
+        view: 1934,
+      },{
+        id: "9008",
+        index:10,
+        title: "9008",
         catagory: ["All", "Hot", "Halogen Headlamp Bulb"],
         power: "custom",
         packaging: "custom",
@@ -1012,19 +948,28 @@
       },
     ],
   };
-  function getCurrentDetailObj(){
+  window.getCurrentDetailObj = function(){
     var goodsId = sessionStorage.getItem('goodsId')
     if(goodsId){
       return window.goodsdata.carheadlights.filter((e)=>goodsId == e.id)[0]
     }else{
       return null
     }
-  }
+  };
+  window.getRelatedGoods = function(){
+    if(!window.currentGoods || !window.currentGoods.id) return false
+    var goodsId = window.currentGoods.id
+    var tempArr = JSON.parse(JSON.stringify(window.goodsdata.carheadlights))
+    var resArr = []
+    if(goodsId){
+      resArr = tempArr.filter((e,i)=>e.index > window.currentGoods.index)
+    }
+    resArr = [...resArr,...window.goodsdata.carheadlights].slice(0,8)
+    return resArr
+  };
   window.currentGoods = getCurrentDetailObj()
-  console.log(window.currentGoods)
-
-
-  initCarheadlightsTabs();
+  window.relatedGoods = getRelatedGoods()
+  
   $(".footerlink").click(function (e) {
     e.stopPropagation();
     e.preventDefault();
@@ -1056,6 +1001,7 @@
     });
 
 
+  // initCarheadlightsTabs();
 
   // Dom Ready
   $(function () {
