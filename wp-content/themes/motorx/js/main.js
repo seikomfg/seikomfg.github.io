@@ -872,13 +872,12 @@
         video:'https://youtu.be/vBtYtWlO8Kg?si=wkhCI63_l1XKhu9D',
         banner: [
           "/wp-content/uploads/carheadlights/LED.H4.Headlight.Bulb/LED.H4.Headlight.Bulb-1.jpg",
-          "/wp-content/uploads/carheadlights/LED.H4.Headlight.Bulb/LED.H4.Headlight.Bulb-2.jpg",
-          "/wp-content/uploads/carheadlights/LED.H4.Headlight.Bulb/LED.H4.Headlight.Bulb-3.jpg",
-          "/wp-content/uploads/carheadlights/LED.H4.Headlight.Bulb/LED.H4.Headlight.Bulb-4.jpg",
-          "/wp-content/uploads/carheadlights/LED.H4.Headlight.Bulb/LED.H4.Headlight.Bulb-5.jpg",
-          "/wp-content/uploads/carheadlights/LED.H4.Headlight.Bulb/LED.H4.Headlight.Bulb-6.jpg",
-          "/wp-content/uploads/carheadlights/LED.H4.Headlight.Bulb/LED.H4.Headlight.Bulb-7.jpg",
-          "/wp-content/uploads/carheadlights/LED.H4.Headlight.Bulb/LED.H4.Headlight.Bulb-8.jpg"
+          "/wp-content/uploads/carheadlights/LED.H4.Headlight.Bulb/LED.H4.Headlight.Bulb-1.jpg",
+          "/wp-content/uploads/carheadlights/LED.H4.Headlight.Bulb/LED.H4.Headlight.Bulb-1.jpg",
+          "/wp-content/uploads/carheadlights/LED.H4.Headlight.Bulb/LED.H4.Headlight.Bulb-1.jpg",
+          "/wp-content/uploads/carheadlights/LED.H4.Headlight.Bulb/LED.H4.Headlight.Bulb-1.jpg",
+          "/wp-content/uploads/carheadlights/LED.H4.Headlight.Bulb/LED.H4.Headlight.Bulb-1.jpg",
+          "/wp-content/uploads/carheadlights/LED.H4.Headlight.Bulb/LED.H4.Headlight.Bulb-1.jpg"
         ],
         desc:{
           en:[
@@ -888,19 +887,19 @@
             `6500K color Temperature &amp; high quality product material`
           ]
         },
-        Specifications:{
-          en:{
-            'Brand':`QiangRui`,
-            'Power':`55W/Customization`,
-            'Packaging':`Customization`,
-            'Voltage':`12V/24V/Customization`,
-            'Light Source Model':`SMD Chips`,
-            'Color temperature':`6000/Customization`,
-            'Heat Dissipation Theory':`Aviation Aluminum 6063`,
-            'Operation Life':'>30000hrs'
-          }
+        specifications:{
+          en:[
+            {'Brand':`QiangRui`},
+            {'Power':`55W/Customization`},
+            {'Packaging':`Customization`},
+            {'Voltage':`12V/24V/Customization`},
+            {'Light Source Model':`SMD Chips`},
+            {'Color temperature':`6000/Customization`},
+            {'Heat Dissipation Theory':`Aviation Aluminum 6063`},
+            {'Operation Life':'>30000hrs'}
+          ]
         },
-        Features:{
+        features:{
           en:[
             `300% BRIGHTER THAN HALOGEN – 3 Color Changing LED headlight bulbs contains Top-Grade 30 Dots LED COB Diodes per side. Focused Beam Pattern Design that Produces 6500 Lumens. Prevents Blinding Oncoming Traffic and Glare Free Driving.`,
             `CAN BUS-READY FOR 98% OF VEHICLES – CAN Bus canceler increases the current to a safe level to ensure that your vehicle doesn’t bring up any error messages and work as expected. Some cars may require an additional CANBUS decoder to be installed.`,
