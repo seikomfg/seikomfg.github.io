@@ -1488,7 +1488,7 @@
                             'subHtml': subHtml
                         });
                     });
-
+                    
                     $this.lightGallery({
                         hash: false,
                         galleryId: galleryId,

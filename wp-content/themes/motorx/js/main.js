@@ -385,7 +385,121 @@
     },
   });
 
+  window.jumpDetail = function(e,id){
+    console.log(id,123123123)
+    e.stopPropagation();
+    e.preventDefault();
+    if(!id) return false
+    sessionStorage.setItem('goodsId',id);
+    window.location.href = `/carheadlights/${id}`;
+    return false
+  }
   var getOneItem = function (item) {
+    var {
+      id,
+      title,
+      catagory,
+      power,
+      packaging,
+      minimum,
+      trade_mode,
+      banner,
+      view,
+    } = item;
+    return `<div class="item">
+            <div class="listing-post">
+                <div class="featured-property">
+                    <div class="group-meta">
+                        <div class="inner">
+                            <span class="my-count-list-gallery count-list-gallery view-gallery" >
+                              <img src="/wp-content/plugins/tf-car-listing/includes/elementor-widget/assets/images/icons/camera.svg" alt="icon-map">${banner.length} 
+                            </span>    
+                        </div>
+                         
+
+
+
+                    </div>
+                    <div class="listing-images">
+                        <div class="hover-listing-image">
+                            <div class="wrap-hover-listing">
+                                <div class="listing-item active">
+                                    <div class="images">
+                                        <img decoding="async"
+                                            src="${banner[0]}"
+                                            class="swiper-image lazy tfcl-light-gallery"
+                                            alt="images">
+                                    </div>
+                                </div>
+                                <div class="listing-item">
+                                    <div class="images">
+                                        <img decoding="async"
+                                            src="${banner[1]}"
+                                            class="swiper-image lazy tfcl-light-gallery"
+                                            alt="images">
+                                    </div>
+                                </div>
+                                <div class="listing-item">
+                                    <div class="images">
+                                        <img decoding="async"
+                                            src="${banner[2]}"
+                                            class="swiper-image lazy tfcl-light-gallery"
+                                            alt="images">
+                                    </div>
+                                </div>
+                                <div class="listing-item view-gallery data-mfp-event">
+                                    <div class="images">
+                                        <img decoding="async"
+                                            src="${banner[3]}"
+                                            class="swiper-image lazy tfcl-light-gallery"
+                                            alt="images">
+                                    </div>
+                                </div>
+                                <div class="bullet-hover-listing">
+                                    <div class="bl-item active"></div>
+                                    <div class="bl-item"></div>
+                                    <div class="bl-item"></div>
+                                    <div class="bl-item"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="content">
+                    <h3 class="title my-title my-detail-link" data-id="${id}">
+                        <a class="title-a">${title}</a>
+
+                            <div class="button-details my-button-details">
+                            <a>detail<i class="icon-seikomfg-readmore"></i></a>
+                        </div>
+                    </h3>
+                    <div class="description">
+                        <ul>
+                            <li class="listing-information fuel">
+                                <div class="inner">
+                                    <span
+                                        class="my-span">packaging&power</span>
+                                    <p class="my-p">${'customization'}</p>
+                                </div>
+                            </li>
+                            
+                            <li
+                                class="listing-information mileages">
+                                <div class="inner">
+                                    <span
+                                        class="my-span">After-sales Service</span>
+                                    <p class="my-p">${'12months'}</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>`;
+  };
+  var getOneItemRelated = function (item) {
     var {
       id,
       title,
@@ -407,11 +521,10 @@
                               <img src="/wp-content/plugins/tf-car-listing/includes/elementor-widget/assets/images/icons/camera.svg" alt="icon-map">${banner.length} 
                             </span>    
                         </div>
-                         <div class="inner">
-                            <span class="my-count-list-gallery">
-                              <i class="icon-seikomfg-open-eye"></i>${view}
-                            </span> 
-                          </div>
+                         
+
+
+
                     </div>
                     <div class="listing-images">
                         <div class="hover-listing-image">
@@ -634,6 +747,11 @@
         );
     });
 
+    // 给标题和detail按钮绑定点击跳转逻辑
+    $('.my-detail-link').on("click", function (e) {
+      window.jumpDetail(e,$(this).attr('data-id'))
+    })
+
     initpagination(pageNum);
   };
   var getOneTabStr = function (name) {
@@ -749,8 +867,51 @@
         view: 1734,
       },
       {
-        id: "H4",
-        title: "H4",
+        id: "LED.H4.Headlight.Bulb",
+        title: "LED H4 Headlight Bulb",
+        catagory: ["All", "Hot", "Led Headlight Bulb"],
+        banner: [
+          "/wp-content/uploads/carheadlights/LED.H4.Headlight.Bulb/LED.H4.Headlight.Bulb-1.jpg",
+          "/wp-content/uploads/carheadlights/LED.H4.Headlight.Bulb/LED.H4.Headlight.Bulb-2.jpg",
+          "/wp-content/uploads/carheadlights/LED.H4.Headlight.Bulb/LED.H4.Headlight.Bulb-3.jpg",
+          "/wp-content/uploads/carheadlights/LED.H4.Headlight.Bulb/LED.H4.Headlight.Bulb-4.jpg",
+          "/wp-content/uploads/carheadlights/LED.H4.Headlight.Bulb/LED.H4.Headlight.Bulb-5.jpg",
+          "/wp-content/uploads/carheadlights/LED.H4.Headlight.Bulb/LED.H4.Headlight.Bulb-6.jpg",
+          "/wp-content/uploads/carheadlights/LED.H4.Headlight.Bulb/LED.H4.Headlight.Bulb-7.jpg",
+          "/wp-content/uploads/carheadlights/LED.H4.Headlight.Bulb/LED.H4.Headlight.Bulb-8.jpg"
+        ],
+        desc:{
+          en:[
+            `Canbus LED error free in Luxury vehicles`,
+            `450W high power LED headlight with lower battery consumption`,
+            `Waterproof LED headlight`,
+            `6500K color Temperature &amp; high quality product material`
+          ]
+        },
+        Specifications:{
+          en:{
+            'Brand':`QiangRui`,
+            'Power':`55W/Customization`,
+            'Packaging':`Customization`,
+            'Voltage':`12V/24V/Customization`,
+            'Light Source Model':`SMD Chips`,
+            'Color temperature':`6000/Customization`,
+            'Heat Dissipation Theory':`Aviation Aluminum 6063`,
+            'Operation Life':'>30000hrs'
+          }
+        },
+        Features:{
+          en:[
+            `300% BRIGHTER THAN HALOGEN – 3 Color Changing LED headlight bulbs contains Top-Grade 30 Dots LED COB Diodes per side. Focused Beam Pattern Design that Produces 6500 Lumens. Prevents Blinding Oncoming Traffic and Glare Free Driving.`,
+            `CAN BUS-READY FOR 98% OF VEHICLES – CAN Bus canceler increases the current to a safe level to ensure that your vehicle doesn’t bring up any error messages and work as expected. Some cars may require an additional CANBUS decoder to be installed.`,
+            `QUALITY AND DURABILITY – Toby’s LED car headlights are made with aluminum alloy and polycarbonate. Performs well on extreme temperatures ranging from -40°C to +80°C. IP65 waterproof and 12,000 RPM fan to expand lifespan up to 30,000 hrs.`,
+          ]
+        },
+        view: 1734,
+      },
+      {
+        id: "Halogen-H4-Headlamp-Bulb",
+        title: "Halogen H4 Headlamp Bulb",
         catagory: ["All", "Hot", "Halogen Headlamp Bulb"],
         power: "custom",
         packaging: "custom",

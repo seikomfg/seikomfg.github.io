@@ -11679,3 +11679,12 @@ abc{
   border-style: solid;
   border-radius: 50%;
 }
+.listing-info-header{
+  margin-bottom: 0 !important;
+}
+.my-reviews-inner{
+  margin-bottom: 0 !important;
+}
+.my-detail-link{
+  cursor: pointer;
+}

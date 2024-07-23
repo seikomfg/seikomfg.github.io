@@ -342,7 +342,7 @@
 
 .listing-info-detail #tfcl-features {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: auto;
     gap: 20px;
 }
 
@@ -1377,7 +1377,7 @@
     }
 
     .listing-info-detail #tfcl-features {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: auto;
     }
 
     .single-listing-element.listing-location #map-single {
