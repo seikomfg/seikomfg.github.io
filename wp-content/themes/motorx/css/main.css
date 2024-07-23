@@ -11688,3 +11688,20 @@ abc{
 .my-detail-link{
   cursor: pointer;
 }
+.listing-infor-box .icon-seikomfg-star.active::before {
+  content: '\e942';
+  color: var(--theme-primary-color);
+}
+.my-desc-li{
+  display: flex;
+  color: #595960;
+  font-size: 16px;
+  font-weight: 500;
+}
+.my-desc-li .icon{
+  margin-right: 15px;
+}
+.icon-seikomfg-book-mark2.active::before {
+  color: var(--theme-primary-color) !important;
+
+}

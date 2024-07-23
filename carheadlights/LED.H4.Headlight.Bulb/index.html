@@ -1928,7 +1928,7 @@
 													<div class="container-grid-gallery">
 														<div class="row">
 															<div class="tfcl-listing-info style-grid">
-																<div
+																<!-- <div
 																	class="item listing-gallery-item tfcl-light-gallery item-1">
 																	<img loading="lazy"
 																		src="/wp-content/uploads/2024/01/carr-31-3.webp"
@@ -1937,7 +1937,7 @@
 																	<ul class="list-control-gallery">
 																		<li>
 																			<span
-																				data-src="https://youtu.be/gRGuZNLyyzU"
+																				data-src="https://youtu.be/vBtYtWlO8Kg?si=wkhCI63_l1XKhu9D"
 																				class="tfcl-view-video"><i
 																					class="icon-seikomfg-video-list"></i>Video</span>
 																		</li>
@@ -2034,7 +2034,87 @@
 																		href="/wp-content/uploads/2024/01/carr-34-1.webp"
 																		class="zoomGallery"></a>
 
-																</div>
+																</div> -->
+
+																<script>
+																	jQuery(function ($){ 
+																		function getOneThumb(index){
+																			if(index == 0){
+																				return `<div
+																					class="item listing-gallery-item tfcl-light-gallery item-${index+1}">
+																					<img loading="lazy"
+																						src="${window.currentGoods.banner[index]}"
+																						alt="Chevrolet Corvette Stingray"
+																						title="Chevrolet Corvette Stingray">
+																					<ul class="list-control-gallery">
+																						<li>
+																							<span
+																								data-src="${window.currentGoods.video || ''}"
+																								class="tfcl-view-video"><i
+																									class="icon-seikomfg-video-list"></i>Video</span>
+																						</li>
+																						<li>
+																							<span class="show-gallery"><i
+																									class="icon-seikomfg-video-list"></i>All
+																								Photo</span>
+																						</li>
+																					</ul>
+																					<a data-thumb-src="${window.currentGoods.banner[index]}"
+																						data-gallery-id="tfcl-437668282"
+																						data-rel="tfcl_light_gallery"
+																						href="${window.currentGoods.banner[index]}"
+																						class="zoomGallery"></a>
+																
+																				</div>`
+																			}else if (index == 4){
+																				return `<div
+																					class="item listing-gallery-item tfcl-light-gallery item-${index+1}">
+																					<img loading="lazy"
+																						src="${window.currentGoods.banner[index]}"
+																						alt="Chevrolet Corvette Stingray"
+																						title="Chevrolet Corvette Stingray">
+																
+																
+																					<a data-thumb-src="${window.currentGoods.banner[index]}"
+																						data-gallery-id="tfcl-437668282"
+																						data-rel="tfcl_light_gallery"
+																						href="${window.currentGoods.banner[index]}"
+																						class="zoomGallery"></a>
+																
+																					<div class="overlay_item">
+																						<div class="inner">
+																							<i class="icon-seikomfg-image2"></i>
+																							<p>${window.currentGoods.banner.length - 5} more photos </p>
+																						</div>
+																					</div>
+																				</div>`
+																			}else{
+																				return `
+																				<div
+																					class="item listing-gallery-item tfcl-light-gallery item-${index+1}">
+																					<img loading="lazy"
+																						src="${window.currentGoods.banner[index]}"
+																						alt="Chevrolet Corvette Stingray"
+																						title="Chevrolet Corvette Stingray">
+																
+																
+																					<a data-thumb-src="${window.currentGoods.banner[index]}"
+																						data-gallery-id="tfcl-437668282"
+																						data-rel="tfcl_light_gallery"
+																						href="${window.currentGoods.banner[index]}"
+																						class="zoomGallery"></a>
+																
+																				</div>`
+																			}
+																		}
+																		var str = ''
+																		window.currentGoods.banner.forEach(function(e,i){
+																			str = str + getOneThumb(i)
+																		})
+																		
+																		$('.tfcl-listing-gallery-single .tfcl-listing-info.style-grid').html($(str))
+																	});
+																</script>
 															</div>
 														</div>
 													</div>
@@ -2054,13 +2134,48 @@
 													data-hide="Hide Less">
 													<p>
 													<ul>
-														<li>Canbus LED error free in Luxury vehicles</li>
-														<li>450W high power LED headlight with lower battery consumption
+														<!-- <li class="my-desc-li">
+															<div class="icon">
+																<i class="star disabled-click icon-seikomfg-book-mark2 active"></i>
+															</div>
+															<span>Canbus LED error free in Luxury vehicles</span>
 														</li>
-														<li>Waterproof LED headlight</li>
-														<li>6500K color Temperature &amp; high quality product material
+														<li class="my-desc-li">
+															<div class="icon">
+																<i class="star disabled-click icon-seikomfg-book-mark2 active"></i>
+															</div>
+															<span>450W high power LED headlight with lower battery consumption</span>
 														</li>
-														<li>G-XP x3 customized light source technology</li>
+														<li class="my-desc-li">
+															<div class="icon">
+																<i class="star disabled-click icon-seikomfg-book-mark2 active"></i>
+															</div>
+															<span>Waterproof LED headlight</span>
+														</li>
+														<li class="my-desc-li">
+															<div class="icon">
+																<i class="star disabled-click icon-seikomfg-book-mark2 active"></i>
+															</div>
+															<span>6500K color Temperature &amp; high quality product material</span>
+														</li> -->
+														<script>
+															jQuery(function ($){ 
+																function getOneTpl(e,index){
+																	return `<li class="my-desc-li">
+																		<div class="icon">
+																			<i class="star disabled-click icon-seikomfg-book-mark2 active"></i>
+																		</div>
+																		<span>${e}</span>
+																	</li>`
+																}
+																var str = ''
+																window.currentGoods.desc.en.forEach(function(e,i){
+																	str = str + getOneTpl(e,i)
+																})
+																
+																$('#description .tfcl-listing-info ul').html($(str))
+															});
+														</script>
 													</ul>
 													</p>
 													<script>
@@ -2078,8 +2193,7 @@
 															<div class="col-xl-6 col-md-6 item">
 																<div class="inner listing-infor-box">
 																	<div class="icon">
-																		<img src="/wp-content/plugins/tf-car-listing/public/assets/image/icon/single-listing/car.svg"
-																			class="icon-single" alt="icon-single">
+																		<i class="star disabled-click icon-seikomfg-star active"></i>
 																	</div>
 																	<div class="content-listing-info">
 																		<span class="listing-info-title">
@@ -2091,8 +2205,7 @@
 															<div class="col-xl-6 col-md-6 item">
 																<div class="inner listing-infor-box">
 																	<div class="icon">
-																		<img src="/wp-content/plugins/tf-car-listing/public/assets/image/icon/single-listing/piston.svg"
-																			class="icon-single" alt="icon-single">
+																		<i class="star disabled-click icon-seikomfg-star active"></i>
 																	</div>
 																	<div class="content-listing-info">
 																		<span
@@ -2104,8 +2217,7 @@
 															<div class="col-xl-6 col-md-6 item">
 																<div class="inner listing-infor-box">
 																	<div class="icon">
-																		<img src="/wp-content/plugins/tf-car-listing/public/assets/image/icon/single-listing/date.svg"
-																			class="icon-single" alt="icon-single">
+																		<i class="star disabled-click icon-seikomfg-star active"></i>
 																	</div>
 																	<div class="content-listing-info">
 																		<span class="listing-info-title">
@@ -2117,8 +2229,7 @@
 															<div class="col-xl-6 col-md-6 item">
 																<div class="inner listing-infor-box">
 																	<div class="icon">
-																		<img src="/wp-content/plugins/tf-car-listing/public/assets/image/icon/single-listing/oil.svg"
-																			class="icon-single" alt="icon-single">
+																		<i class="star disabled-click icon-seikomfg-star active"></i>
 																	</div>
 																	<div class="content-listing-info">
 																		<span class="listing-info-title">Fuel
@@ -2130,8 +2241,7 @@
 															<div class="col-xl-6 col-md-6 item">
 																<div class="inner listing-infor-box">
 																	<div class="icon">
-																		<img src="/wp-content/plugins/tf-car-listing/public/assets/image/icon/single-listing/date.svg"
-																			class="icon-single" alt="icon-single">
+																		<i class="star disabled-click icon-seikomfg-star active"></i>
 																	</div>
 																	<div class="content-listing-info">
 																		<span class="listing-info-title">
@@ -2143,8 +2253,7 @@
 															<div class="col-xl-6 col-md-6 item">
 																<div class="inner listing-infor-box">
 																	<div class="icon">
-																		<img src="/wp-content/plugins/tf-car-listing/public/assets/image/icon/single-listing/door.svg"
-																			class="icon-single" alt="icon-single">
+																		<i class="star disabled-click icon-seikomfg-star active"></i>
 																	</div>
 																	<div class="content-listing-info">
 																		<span class="listing-info-title">Doors:</span>
@@ -2156,8 +2265,7 @@
 															<div class="col-xl-6 col-md-6 item">
 																<div class="inner listing-infor-box">
 																	<div class="icon">
-																		<img src="/wp-content/plugins/tf-car-listing/public/assets/image/icon/single-listing/date.svg"
-																			class="icon-single" alt="icon-single">
+																		<i class="star disabled-click icon-seikomfg-star active"></i>
 																	</div>
 																	<div class="content-listing-info">
 																		<span class="listing-info-title">
@@ -2169,8 +2277,7 @@
 															<div class="col-xl-6 col-md-6 item">
 																<div class="inner listing-infor-box">
 																	<div class="icon">
-																		<img src="/wp-content/plugins/tf-car-listing/public/assets/image/icon/single-listing/color.svg"
-																			class="icon-single" alt="icon-single">
+																		<i class="star disabled-click icon-seikomfg-star active"></i>
 																	</div>
 																	<div class="content-listing-info">
 																		<span class="listing-info-title">Color:</span>
@@ -2181,8 +2288,7 @@
 															<div class="col-xl-6 col-md-6 item">
 																<div class="inner listing-infor-box">
 																	<div class="icon">
-																		<img src="/wp-content/plugins/tf-car-listing/public/assets/image/icon/single-listing/dashboard.svg"
-																			class="icon-single" alt="icon-single">
+																		<i class="star disabled-click icon-seikomfg-star active"></i>
 																	</div>
 																	<div class="content-listing-info">
 																		<span class="listing-info-title">
@@ -2194,8 +2300,7 @@
 															<div class="col-xl-6 col-md-6 item">
 																<div class="inner listing-infor-box">
 																	<div class="icon">
-																		<img src="/wp-content/plugins/tf-car-listing/public/assets/image/icon/single-listing/seat.svg"
-																			class="icon-single" alt="icon-single">
+																		<i class="star disabled-click icon-seikomfg-star active"></i>
 																	</div>
 																	<div class="content-listing-info">
 																		<span class="listing-info-title">Seats:</span>
@@ -2207,8 +2312,7 @@
 															<div class="col-xl-6 col-md-6 item">
 																<div class="inner listing-infor-box">
 																	<div class="icon">
-																		<img src="/wp-content/plugins/tf-car-listing/public/assets/image/icon/single-listing/control.svg"
-																			class="icon-single" alt="icon-single">
+																		<i class="star disabled-click icon-seikomfg-star active"></i>
 																	</div>
 																	<div class="content-listing-info">
 																		<span
@@ -2220,8 +2324,7 @@
 															<div class="col-xl-6 col-md-6 item">
 																<div class="inner listing-infor-box">
 																	<div class="icon">
-																		<img src="/wp-content/plugins/tf-car-listing/public/assets/image/icon/single-listing/gas.svg"
-																			class="icon-single" alt="icon-single">
+																		<i class="star disabled-click icon-seikomfg-star active"></i>
 																	</div>
 																	<div class="content-listing-info">
 																		<span class="listing-info-title">City
@@ -2234,8 +2337,7 @@
 															<div class="col-xl-6 col-md-6 item">
 																<div class="inner listing-infor-box">
 																	<div class="icon">
-																		<img src="/wp-content/plugins/tf-car-listing/public/assets/image/icon/single-listing/engine.svg"
-																			class="icon-single" alt="icon-single">
+																		<i class="star disabled-click icon-seikomfg-star active"></i>
 																	</div>
 																	<div class="content-listing-info">
 																		<span class="listing-info-title">Engine
@@ -2248,8 +2350,7 @@
 															<div class="col-xl-6 col-md-6 item">
 																<div class="inner listing-infor-box">
 																	<div class="icon">
-																		<img src="/wp-content/plugins/tf-car-listing/public/assets/image/icon/single-listing/gas.svg"
-																			class="icon-single" alt="icon-single">
+																		<i class="star disabled-click icon-seikomfg-star active"></i>
 																	</div>
 																	<div class="content-listing-info">
 																		<span class="listing-info-title">Highway
@@ -2262,8 +2363,7 @@
 															<div class="col-xl-6 col-md-6 item">
 																<div class="inner listing-infor-box">
 																	<div class="icon">
-																		<img src="/wp-content/plugins/tf-car-listing/public/assets/image/icon/single-listing/steering.svg"
-																			class="icon-single" alt="icon-single">
+																		<i class="star disabled-click icon-seikomfg-star active"></i>
 																	</div>
 																	<div class="content-listing-info">
 																		<span class="listing-info-title">Drive

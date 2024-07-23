@@ -386,7 +386,6 @@
   });
 
   window.jumpDetail = function(e,id){
-    console.log(id,123123123)
     e.stopPropagation();
     e.preventDefault();
     if(!id) return false
@@ -870,6 +869,7 @@
         id: "LED.H4.Headlight.Bulb",
         title: "LED H4 Headlight Bulb",
         catagory: ["All", "Hot", "Led Headlight Bulb"],
+        video:'https://youtu.be/vBtYtWlO8Kg?si=wkhCI63_l1XKhu9D',
         banner: [
           "/wp-content/uploads/carheadlights/LED.H4.Headlight.Bulb/LED.H4.Headlight.Bulb-1.jpg",
           "/wp-content/uploads/carheadlights/LED.H4.Headlight.Bulb/LED.H4.Headlight.Bulb-2.jpg",
@@ -1013,6 +1013,18 @@
       },
     ],
   };
+  function getCurrentDetailObj(){
+    var goodsId = sessionStorage.getItem('goodsId')
+    if(goodsId){
+      return window.goodsdata.carheadlights.filter((e)=>goodsId == e.id)[0]
+    }else{
+      return null
+    }
+  }
+  window.currentGoods = getCurrentDetailObj()
+  console.log(window.currentGoods)
+
+
   initCarheadlightsTabs();
   $(".footerlink").click(function (e) {
     e.stopPropagation();
