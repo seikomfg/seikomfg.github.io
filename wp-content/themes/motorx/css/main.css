@@ -11758,3 +11758,6 @@ abc{
 .related-my-button-details i{
   margin-left: 5px;
 }
+.tfcl-listing-specifications .listing-infor-box .icon{
+  margin-right: 0px !important;
+}
