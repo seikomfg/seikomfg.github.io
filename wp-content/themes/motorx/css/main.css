@@ -11740,7 +11740,12 @@ abc{
 .link-content{
   cursor: pointer;
 }
-
+.related-title{
+  cursor: pointer;
+}
+.related-title:hover{
+  color:var(--theme-primary-color) !important;
+}
 .my-listing-info-header{
   display: flex !important;
 }

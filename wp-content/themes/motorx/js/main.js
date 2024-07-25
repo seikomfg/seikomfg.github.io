@@ -405,13 +405,16 @@
       trade_mode,
       banner,
       view,
+      video
     } = item;
     return `<div class="item">
             <div class="listing-post">
                 <div class="featured-property">
                     <div class="group-meta">
                         <div class="inner">
-                            <span class="my-count-list-gallery count-list-gallery view-gallery" data-mfp-event>
+                            
+                            ${video?'<span class="my-count-list-gallery count-list-gallery view-gallery"><img src="/wp-content/plugins/tf-car-listing/includes/elementor-widget/assets/images/icons/video.svg" alt="icon-map">1 </span>':''}
+                            <span class="my-count-list-gallery count-list-gallery view-gallery">
                               <img src="/wp-content/plugins/tf-car-listing/includes/elementor-widget/assets/images/icons/camera.svg" alt="icon-map">${banner.length} 
                             </span>    
                         </div>
@@ -744,6 +747,7 @@
         index:1,
         title: "H3",
         catagory: ["All", "New", "Halogen Headlamp Bulb"],
+        video:'https://youtu.be/vBtYtWlO8Kg?si=J4WBT2Lk0eRUbQG5',
         power: "custom",
         packaging: "custom",
         minimum: 200,
@@ -809,6 +813,7 @@
         index:3,
         title: "Halogen H4 Headlamp Bulb",
         catagory: ["All", "Hot", "Halogen Headlamp Bulb"],
+        video:'https://youtu.be/vBtYtWlO8Kg?si=J4WBT2Lk0eRUbQG5',
         power: "custom",
         packaging: "custom",
         minimum: 200,
@@ -827,6 +832,7 @@
         index:4,
         title: "H7",
         catagory: ["All", "Max Repurchase", "Halogen Headlamp Bulb"],
+        video:'https://youtu.be/vBtYtWlO8Kg?si=J4WBT2Lk0eRUbQG5',
         power: "custom",
         packaging: "custom",
         minimum: 200,
@@ -845,6 +851,7 @@
         index:5,
         title: "D1",
         catagory: ["All", "Max Repurchase", "Led Headlight Bulb"],
+        video:'https://youtu.be/vBtYtWlO8Kg?si=J4WBT2Lk0eRUbQG5',
         power: "custom",
         packaging: "custom",
         minimum: 200,
@@ -863,6 +870,7 @@
         index:6,
         title: "D2",
         catagory: ["All", "Hot", "Led Headlight Bulb"],
+        video:'https://youtu.be/vBtYtWlO8Kg?si=J4WBT2Lk0eRUbQG5',
         power: "custom",
         packaging: "custom",
         minimum: 200,

@@ -340,7 +340,7 @@
 }
 
 .tfcl-listing-card .featured-property .view-gallery {
-    cursor: pointer;
+    cursor: default;
 }
 
 .tfcl-listing-card .featured-property .group-meta .view-gallery:hover {
@@ -416,7 +416,7 @@
 }
 
 .tfcl-listing-card .featured-property .view-gallery {
-    cursor: pointer;
+    cursor: default;
 }
 
 .tfcl-listing-card .featured-property img {

@@ -2148,7 +2148,12 @@
 																data-price="$44,850">
 																<div class="group-meta">
 																	<div class="inner">
-																		<span class="count-list-gallery view-gallery" data-mfp-event><img
+																		${e.video?`<span class="count-list-gallery view-gallery"><img
+																				src="/wp-content/plugins/tf-car-listing/includes/elementor-widget/assets/images/icons/video.svg"
+																				alt="icon-map">1</span>`:``
+																			}
+
+																		<span class="count-list-gallery view-gallery"><img
 																				src="/wp-content/plugins/tf-car-listing/includes/elementor-widget/assets/images/icons/camera.svg"
 																				alt="icon-map">${e.banner.length}</span>
 																	</div>
@@ -2204,7 +2209,7 @@
 																	</div>
 																</div>
 															</div>
-															<div class="card-content related-card-content link-content" data-id="${e.id}">
+															<div class="card-content related-card-content" data-id="${e.id}">
 																<h3 class="tfcl-listing-title">
 																	<a class="related-title" data-id="${e.id}" title="${e.id}">${e.title}</a>
 																</h3>
