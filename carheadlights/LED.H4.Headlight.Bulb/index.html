@@ -2152,7 +2152,7 @@
 																				src="/wp-content/plugins/tf-car-listing/includes/elementor-widget/assets/images/icons/camera.svg"
 																				alt="icon-map">${e.banner.length}</span>
 																	</div>
-																	<div class="button-details my-button-details"  data-id="${e.id}">
+																	<div class="button-details my-button-details related-my-button-details" data-id="${e.id}">
 																		<a>detail<i class="icon-seikomfg-readmore"></i></a>
 																	</div>
 																</div>
@@ -2205,8 +2205,8 @@
 																</div>
 															</div>
 															<div class="card-content related-card-content link-content" data-id="${e.id}">
-																<h3 class="tfcl-listing-title related-title">
-																	<a title="${e.id}">${e.title}</a>
+																<h3 class="tfcl-listing-title">
+																	<a class="related-title" data-id="${e.id}" title="${e.id}">${e.title}</a>
 																</h3>
 																<ul class="infor-description related-description">
 																	<li class="listing-information fuel">
@@ -2236,7 +2236,7 @@
 												$('.owl-carousel').html($(str))
 
 												// 给热区绑定点击跳转逻辑
-												$('.link-content').on("click", function (e) {
+												$('.related-title').on("click", function (e) {
 													window.jumpDetail(e, $(this).attr('data-id'))
 												})
 												$('.my-button-details').on("click", function (e) {

@@ -11747,3 +11747,9 @@ abc{
 .my-button-details{
   cursor: pointer;
 }
+.related-my-button-details a{
+  text-transform: uppercase;
+}
+.related-my-button-details i{
+  margin-left: 5px;
+}

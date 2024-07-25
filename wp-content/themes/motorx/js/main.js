@@ -783,7 +783,7 @@
         specifications:{
           en:[
             {'Brand':`QiangRui`},
-            {'Raw Material':`Quartz/Tungsten/Al 6063`},
+            // {'Raw Material':`Quartz/Tungsten/Al 6063`},
             {'Power':`55W/Customization`},
             {'Packaging':`Customization`},
             {'Printing':'Lsaser/Ink/Customization'},
