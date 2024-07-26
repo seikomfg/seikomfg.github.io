@@ -389,7 +389,6 @@
     e.stopPropagation();
     e.preventDefault();
     if(!id) return false
-    sessionStorage.setItem('goodsId',id);
     window.location.href = `/carheadlights/${id}`;
     return false
   }
@@ -957,7 +956,7 @@
     ],
   };
   window.getCurrentDetailObj = function(){
-    var goodsId = sessionStorage.getItem('goodsId')
+    var goodsId = window.location.pathname.split('/').filter(function(dir) { return dir !== ''; }).slice(-1)[0];
     if(goodsId){
       return window.goodsdata.carheadlights.filter((e)=>goodsId == e.id)[0]
     }else{
@@ -1004,7 +1003,6 @@
   $(".footerJump").click(function (e) {
       e.stopPropagation();
       e.preventDefault();
-      sessionStorage.setItem('currentCatagory',$(this).text())
       window.location.href='/carheadlights'
     });
 
