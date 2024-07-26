@@ -743,7 +743,7 @@
     carheadlights: [
       {
         id: "H3",
-        index:1,
+        index:0,
         title: "H3",
         catagory: ["All", "New", "Halogen Headlamp Bulb"],
         video:'https://youtu.be/vBtYtWlO8Kg?si=J4WBT2Lk0eRUbQG5',
@@ -758,11 +758,41 @@
           "/wp-content/uploads/2024/01/carr-57-1.webp",
           "/wp-content/uploads/2024/01/carr-34-1.webp",
         ],
+        desc:{
+          en:[
+            `Canbus LED error free in Luxury vehicles`,
+            `450W high power LED headlight with lower battery consumption`,
+            `Waterproof LED headlight`,
+            `6500K color Temperature &amp; high quality product material`
+          ]
+        },
+        specifications:{
+          en:[
+            {'Brand':`QiangRui`},
+            // {'Raw Material':`Quartz/Tungsten/Al 6063`},
+            {'Power':`55W/Customization`},
+            {'Packaging':`Customization`},
+            {'Printing':'Lsaser/Ink/Customization'},
+            {'Voltage':`12V/24V/Customization`},
+            {'Light Source Model':`SMD Chips`},
+            {'Color temperature':`6000/Customization`},
+            {'Operation Life':'>30000hrs'},
+            {'Trade Mode':'FOB'},
+            {'After-Sales Service':'12 months'}
+          ]
+        },
+        features:{
+          en:[
+            `300% BRIGHTER THAN HALOGEN – 3 Color Changing LED headlight bulbs contains Top-Grade 30 Dots LED COB Diodes per side. Focused Beam Pattern Design that Produces 6500 Lumens. Prevents Blinding Oncoming Traffic and Glare Free Driving.`,
+            `CAN BUS-READY FOR 98% OF VEHICLES – CAN Bus canceler increases the current to a safe level to ensure that your vehicle doesn’t bring up any error messages and work as expected. Some cars may require an additional CANBUS decoder to be installed.`,
+            `QUALITY AND DURABILITY – Toby’s LED car headlights are made with aluminum alloy and polycarbonate. Performs well on extreme temperatures ranging from -40°C to +80°C. IP65 waterproof and 12,000 RPM fan to expand lifespan up to 30,000 hrs.`,
+          ]
+        },
         view: 1734,
       },
       {
         id: "LED.H4.Headlight.Bulb",
-        index:2,
+        index:1,
         title: "LED H4 Headlight Bulb",
         catagory: ["All", "Hot", "Led Headlight Bulb"],
         video:'https://youtu.be/vBtYtWlO8Kg?si=J4WBT2Lk0eRUbQG5',
@@ -809,7 +839,7 @@
       },
       {
         id: "Halogen-H4-Headlamp-Bulb",
-        index:3,
+        index:2,
         title: "Halogen H4 Headlamp Bulb",
         catagory: ["All", "Hot", "Halogen Headlamp Bulb"],
         video:'https://youtu.be/vBtYtWlO8Kg?si=J4WBT2Lk0eRUbQG5',
@@ -824,11 +854,41 @@
           "/wp-content/uploads/2024/01/carr-57-1.webp",
           "/wp-content/uploads/2024/01/carr-34-1.webp",
         ],
+        desc:{
+          en:[
+            `Canbus LED error free in Luxury vehicles`,
+            `450W high power LED headlight with lower battery consumption`,
+            `Waterproof LED headlight`,
+            `6500K color Temperature &amp; high quality product material`
+          ]
+        },
+        specifications:{
+          en:[
+            {'Brand':`QiangRui`},
+            // {'Raw Material':`Quartz/Tungsten/Al 6063`},
+            {'Power':`55W/Customization`},
+            {'Packaging':`Customization`},
+            {'Printing':'Lsaser/Ink/Customization'},
+            {'Voltage':`12V/24V/Customization`},
+            {'Light Source Model':`SMD Chips`},
+            {'Color temperature':`6000/Customization`},
+            {'Operation Life':'>30000hrs'},
+            {'Trade Mode':'FOB'},
+            {'After-Sales Service':'12 months'}
+          ]
+        },
+        features:{
+          en:[
+            `300% BRIGHTER THAN HALOGEN – 3 Color Changing LED headlight bulbs contains Top-Grade 30 Dots LED COB Diodes per side. Focused Beam Pattern Design that Produces 6500 Lumens. Prevents Blinding Oncoming Traffic and Glare Free Driving.`,
+            `CAN BUS-READY FOR 98% OF VEHICLES – CAN Bus canceler increases the current to a safe level to ensure that your vehicle doesn’t bring up any error messages and work as expected. Some cars may require an additional CANBUS decoder to be installed.`,
+            `QUALITY AND DURABILITY – Toby’s LED car headlights are made with aluminum alloy and polycarbonate. Performs well on extreme temperatures ranging from -40°C to +80°C. IP65 waterproof and 12,000 RPM fan to expand lifespan up to 30,000 hrs.`,
+          ]
+        },
         view: 1734,
       },
       {
         id: "H7",
-        index:4,
+        index:3,
         title: "H7",
         catagory: ["All", "Max Repurchase", "Halogen Headlamp Bulb"],
         video:'https://youtu.be/vBtYtWlO8Kg?si=J4WBT2Lk0eRUbQG5',
@@ -843,11 +903,41 @@
           "/wp-content/uploads/2024/01/carr-57-1.webp",
           "/wp-content/uploads/2024/01/carr-34-1.webp",
         ],
+        desc:{
+          en:[
+            `Canbus LED error free in Luxury vehicles`,
+            `450W high power LED headlight with lower battery consumption`,
+            `Waterproof LED headlight`,
+            `6500K color Temperature &amp; high quality product material`
+          ]
+        },
+        specifications:{
+          en:[
+            {'Brand':`QiangRui`},
+            // {'Raw Material':`Quartz/Tungsten/Al 6063`},
+            {'Power':`55W/Customization`},
+            {'Packaging':`Customization`},
+            {'Printing':'Lsaser/Ink/Customization'},
+            {'Voltage':`12V/24V/Customization`},
+            {'Light Source Model':`SMD Chips`},
+            {'Color temperature':`6000/Customization`},
+            {'Operation Life':'>30000hrs'},
+            {'Trade Mode':'FOB'},
+            {'After-Sales Service':'12 months'}
+          ]
+        },
+        features:{
+          en:[
+            `300% BRIGHTER THAN HALOGEN – 3 Color Changing LED headlight bulbs contains Top-Grade 30 Dots LED COB Diodes per side. Focused Beam Pattern Design that Produces 6500 Lumens. Prevents Blinding Oncoming Traffic and Glare Free Driving.`,
+            `CAN BUS-READY FOR 98% OF VEHICLES – CAN Bus canceler increases the current to a safe level to ensure that your vehicle doesn’t bring up any error messages and work as expected. Some cars may require an additional CANBUS decoder to be installed.`,
+            `QUALITY AND DURABILITY – Toby’s LED car headlights are made with aluminum alloy and polycarbonate. Performs well on extreme temperatures ranging from -40°C to +80°C. IP65 waterproof and 12,000 RPM fan to expand lifespan up to 30,000 hrs.`,
+          ]
+        },
         view: 1734,
       },
       {
         id: "D1",
-        index:5,
+        index:4,
         title: "D1",
         catagory: ["All", "Max Repurchase", "Led Headlight Bulb"],
         video:'https://youtu.be/vBtYtWlO8Kg?si=J4WBT2Lk0eRUbQG5',
@@ -862,11 +952,41 @@
           "/wp-content/uploads/2024/01/carr-57-1.webp",
           "/wp-content/uploads/2024/01/carr-34-1.webp",
         ],
+        desc:{
+          en:[
+            `Canbus LED error free in Luxury vehicles`,
+            `450W high power LED headlight with lower battery consumption`,
+            `Waterproof LED headlight`,
+            `6500K color Temperature &amp; high quality product material`
+          ]
+        },
+        specifications:{
+          en:[
+            {'Brand':`QiangRui`},
+            // {'Raw Material':`Quartz/Tungsten/Al 6063`},
+            {'Power':`55W/Customization`},
+            {'Packaging':`Customization`},
+            {'Printing':'Lsaser/Ink/Customization'},
+            {'Voltage':`12V/24V/Customization`},
+            {'Light Source Model':`SMD Chips`},
+            {'Color temperature':`6000/Customization`},
+            {'Operation Life':'>30000hrs'},
+            {'Trade Mode':'FOB'},
+            {'After-Sales Service':'12 months'}
+          ]
+        },
+        features:{
+          en:[
+            `300% BRIGHTER THAN HALOGEN – 3 Color Changing LED headlight bulbs contains Top-Grade 30 Dots LED COB Diodes per side. Focused Beam Pattern Design that Produces 6500 Lumens. Prevents Blinding Oncoming Traffic and Glare Free Driving.`,
+            `CAN BUS-READY FOR 98% OF VEHICLES – CAN Bus canceler increases the current to a safe level to ensure that your vehicle doesn’t bring up any error messages and work as expected. Some cars may require an additional CANBUS decoder to be installed.`,
+            `QUALITY AND DURABILITY – Toby’s LED car headlights are made with aluminum alloy and polycarbonate. Performs well on extreme temperatures ranging from -40°C to +80°C. IP65 waterproof and 12,000 RPM fan to expand lifespan up to 30,000 hrs.`,
+          ]
+        },
         view: 1734,
       },
       {
         id: "D2",
-        index:6,
+        index:5,
         title: "D2",
         catagory: ["All", "Hot", "Led Headlight Bulb"],
         video:'https://youtu.be/vBtYtWlO8Kg?si=J4WBT2Lk0eRUbQG5',
@@ -881,11 +1001,41 @@
           "/wp-content/uploads/2024/01/carr-57-1.webp",
           "/wp-content/uploads/2024/01/carr-34-1.webp",
         ],
+        desc:{
+          en:[
+            `Canbus LED error free in Luxury vehicles`,
+            `450W high power LED headlight with lower battery consumption`,
+            `Waterproof LED headlight`,
+            `6500K color Temperature &amp; high quality product material`
+          ]
+        },
+        specifications:{
+          en:[
+            {'Brand':`QiangRui`},
+            // {'Raw Material':`Quartz/Tungsten/Al 6063`},
+            {'Power':`55W/Customization`},
+            {'Packaging':`Customization`},
+            {'Printing':'Lsaser/Ink/Customization'},
+            {'Voltage':`12V/24V/Customization`},
+            {'Light Source Model':`SMD Chips`},
+            {'Color temperature':`6000/Customization`},
+            {'Operation Life':'>30000hrs'},
+            {'Trade Mode':'FOB'},
+            {'After-Sales Service':'12 months'}
+          ]
+        },
+        features:{
+          en:[
+            `300% BRIGHTER THAN HALOGEN – 3 Color Changing LED headlight bulbs contains Top-Grade 30 Dots LED COB Diodes per side. Focused Beam Pattern Design that Produces 6500 Lumens. Prevents Blinding Oncoming Traffic and Glare Free Driving.`,
+            `CAN BUS-READY FOR 98% OF VEHICLES – CAN Bus canceler increases the current to a safe level to ensure that your vehicle doesn’t bring up any error messages and work as expected. Some cars may require an additional CANBUS decoder to be installed.`,
+            `QUALITY AND DURABILITY – Toby’s LED car headlights are made with aluminum alloy and polycarbonate. Performs well on extreme temperatures ranging from -40°C to +80°C. IP65 waterproof and 12,000 RPM fan to expand lifespan up to 30,000 hrs.`,
+          ]
+        },
         view: 1734,
       },
       {
         id: "D4",
-        index:7,
+        index:6,
         title: "D4",
         catagory: ["All", "New", "Led Headlight Bulb"],
         power: "custom",
@@ -899,11 +1049,41 @@
           "/wp-content/uploads/2024/01/carr-57-1.webp",
           "/wp-content/uploads/2024/01/carr-34-1.webp",
         ],
+        desc:{
+          en:[
+            `Canbus LED error free in Luxury vehicles`,
+            `450W high power LED headlight with lower battery consumption`,
+            `Waterproof LED headlight`,
+            `6500K color Temperature &amp; high quality product material`
+          ]
+        },
+        specifications:{
+          en:[
+            {'Brand':`QiangRui`},
+            // {'Raw Material':`Quartz/Tungsten/Al 6063`},
+            {'Power':`55W/Customization`},
+            {'Packaging':`Customization`},
+            {'Printing':'Lsaser/Ink/Customization'},
+            {'Voltage':`12V/24V/Customization`},
+            {'Light Source Model':`SMD Chips`},
+            {'Color temperature':`6000/Customization`},
+            {'Operation Life':'>30000hrs'},
+            {'Trade Mode':'FOB'},
+            {'After-Sales Service':'12 months'}
+          ]
+        },
+        features:{
+          en:[
+            `300% BRIGHTER THAN HALOGEN – 3 Color Changing LED headlight bulbs contains Top-Grade 30 Dots LED COB Diodes per side. Focused Beam Pattern Design that Produces 6500 Lumens. Prevents Blinding Oncoming Traffic and Glare Free Driving.`,
+            `CAN BUS-READY FOR 98% OF VEHICLES – CAN Bus canceler increases the current to a safe level to ensure that your vehicle doesn’t bring up any error messages and work as expected. Some cars may require an additional CANBUS decoder to be installed.`,
+            `QUALITY AND DURABILITY – Toby’s LED car headlights are made with aluminum alloy and polycarbonate. Performs well on extreme temperatures ranging from -40°C to +80°C. IP65 waterproof and 12,000 RPM fan to expand lifespan up to 30,000 hrs.`,
+          ]
+        },
         view: 1734,
       },
       {
         id: "9005",
-        index:8,
+        index:7,
         title: "9005",
         catagory: ["All", "Hot", "Halogen Headlamp Bulb"],
         power: "custom",
@@ -917,10 +1097,40 @@
           "/wp-content/uploads/2024/01/carr-57-1.webp",
           "/wp-content/uploads/2024/01/carr-34-1.webp",
         ],
+        desc:{
+          en:[
+            `Canbus LED error free in Luxury vehicles`,
+            `450W high power LED headlight with lower battery consumption`,
+            `Waterproof LED headlight`,
+            `6500K color Temperature &amp; high quality product material`
+          ]
+        },
+        specifications:{
+          en:[
+            {'Brand':`QiangRui`},
+            // {'Raw Material':`Quartz/Tungsten/Al 6063`},
+            {'Power':`55W/Customization`},
+            {'Packaging':`Customization`},
+            {'Printing':'Lsaser/Ink/Customization'},
+            {'Voltage':`12V/24V/Customization`},
+            {'Light Source Model':`SMD Chips`},
+            {'Color temperature':`6000/Customization`},
+            {'Operation Life':'>30000hrs'},
+            {'Trade Mode':'FOB'},
+            {'After-Sales Service':'12 months'}
+          ]
+        },
+        features:{
+          en:[
+            `300% BRIGHTER THAN HALOGEN – 3 Color Changing LED headlight bulbs contains Top-Grade 30 Dots LED COB Diodes per side. Focused Beam Pattern Design that Produces 6500 Lumens. Prevents Blinding Oncoming Traffic and Glare Free Driving.`,
+            `CAN BUS-READY FOR 98% OF VEHICLES – CAN Bus canceler increases the current to a safe level to ensure that your vehicle doesn’t bring up any error messages and work as expected. Some cars may require an additional CANBUS decoder to be installed.`,
+            `QUALITY AND DURABILITY – Toby’s LED car headlights are made with aluminum alloy and polycarbonate. Performs well on extreme temperatures ranging from -40°C to +80°C. IP65 waterproof and 12,000 RPM fan to expand lifespan up to 30,000 hrs.`,
+          ]
+        },
         view: 1934,
       },{
         id: "9008",
-        index:9,
+        index:8,
         title: "9007",
         catagory: ["All", "Hot", "Halogen Headlamp Bulb"],
         power: "custom",
@@ -934,10 +1144,40 @@
           "/wp-content/uploads/2024/01/carr-57-1.webp",
           "/wp-content/uploads/2024/01/carr-34-1.webp",
         ],
+        desc:{
+          en:[
+            `Canbus LED error free in Luxury vehicles`,
+            `450W high power LED headlight with lower battery consumption`,
+            `Waterproof LED headlight`,
+            `6500K color Temperature &amp; high quality product material`
+          ]
+        },
+        specifications:{
+          en:[
+            {'Brand':`QiangRui`},
+            // {'Raw Material':`Quartz/Tungsten/Al 6063`},
+            {'Power':`55W/Customization`},
+            {'Packaging':`Customization`},
+            {'Printing':'Lsaser/Ink/Customization'},
+            {'Voltage':`12V/24V/Customization`},
+            {'Light Source Model':`SMD Chips`},
+            {'Color temperature':`6000/Customization`},
+            {'Operation Life':'>30000hrs'},
+            {'Trade Mode':'FOB'},
+            {'After-Sales Service':'12 months'}
+          ]
+        },
+        features:{
+          en:[
+            `300% BRIGHTER THAN HALOGEN – 3 Color Changing LED headlight bulbs contains Top-Grade 30 Dots LED COB Diodes per side. Focused Beam Pattern Design that Produces 6500 Lumens. Prevents Blinding Oncoming Traffic and Glare Free Driving.`,
+            `CAN BUS-READY FOR 98% OF VEHICLES – CAN Bus canceler increases the current to a safe level to ensure that your vehicle doesn’t bring up any error messages and work as expected. Some cars may require an additional CANBUS decoder to be installed.`,
+            `QUALITY AND DURABILITY – Toby’s LED car headlights are made with aluminum alloy and polycarbonate. Performs well on extreme temperatures ranging from -40°C to +80°C. IP65 waterproof and 12,000 RPM fan to expand lifespan up to 30,000 hrs.`,
+          ]
+        },
         view: 1934,
       },{
         id: "9008",
-        index:10,
+        index:9,
         title: "9008",
         catagory: ["All", "Hot", "Halogen Headlamp Bulb"],
         power: "custom",
@@ -951,10 +1191,94 @@
           "/wp-content/uploads/2024/01/carr-57-1.webp",
           "/wp-content/uploads/2024/01/carr-34-1.webp",
         ],
+        desc:{
+          en:[
+            `Canbus LED error free in Luxury vehicles`,
+            `450W high power LED headlight with lower battery consumption`,
+            `Waterproof LED headlight`,
+            `6500K color Temperature &amp; high quality product material`
+          ]
+        },
+        specifications:{
+          en:[
+            {'Brand':`QiangRui`},
+            // {'Raw Material':`Quartz/Tungsten/Al 6063`},
+            {'Power':`55W/Customization`},
+            {'Packaging':`Customization`},
+            {'Printing':'Lsaser/Ink/Customization'},
+            {'Voltage':`12V/24V/Customization`},
+            {'Light Source Model':`SMD Chips`},
+            {'Color temperature':`6000/Customization`},
+            {'Operation Life':'>30000hrs'},
+            {'Trade Mode':'FOB'},
+            {'After-Sales Service':'12 months'}
+          ]
+        },
+        features:{
+          en:[
+            `300% BRIGHTER THAN HALOGEN – 3 Color Changing LED headlight bulbs contains Top-Grade 30 Dots LED COB Diodes per side. Focused Beam Pattern Design that Produces 6500 Lumens. Prevents Blinding Oncoming Traffic and Glare Free Driving.`,
+            `CAN BUS-READY FOR 98% OF VEHICLES – CAN Bus canceler increases the current to a safe level to ensure that your vehicle doesn’t bring up any error messages and work as expected. Some cars may require an additional CANBUS decoder to be installed.`,
+            `QUALITY AND DURABILITY – Toby’s LED car headlights are made with aluminum alloy and polycarbonate. Performs well on extreme temperatures ranging from -40°C to +80°C. IP65 waterproof and 12,000 RPM fan to expand lifespan up to 30,000 hrs.`,
+          ]
+        },
         view: 1934,
       },
-    ],
+    ]
   };
+  window.blog = {
+    list:[
+      {
+        id:'d1',
+        index:0,
+        title:'123',
+        date:'Dicembre 13, 2023',
+        content:'sdflksdfkj',
+        post:'/wp-content/uploads/2023/12/bg02_07.webp'
+      },
+      {
+        id:'d2',
+        index:1,
+        title:'123',
+        date:'Dicembre 13, 2023',
+        content:'sdflksdfkj',
+        post:'/wp-content/uploads/2023/12/blog05-1.webp'
+      },
+      {
+        id:'d2',
+        index:1,
+        title:'123',
+        date:'Dicembre 13, 2023',
+        content:'sdflksdfkj',
+        post:'/wp-content/uploads/2023/12/blog04-1.webp'
+      },
+      {
+        id:'d3',
+        index:3,
+        title:'123',
+        date:'Dicembre 13, 2023',
+        content:'sdflksdfkj',
+        post:'/wp-content/uploads/2023/12/blog04-1.webp'
+      },
+      {
+        id:'d4',
+        index:4,
+        title:'123',
+        date:'Dicembre 13, 2023',
+        content:'sdflksdfkj',
+        post:'/wp-content/uploads/2023/12/blog05-1.webp'
+      },
+      {
+        id:'d5',
+        index:5,
+        title:'123',
+        date:'Dicembre 13, 2023',
+        content:'sdflksdfkj',
+        post:'/wp-content/uploads/2023/12/bg02_07.webp'
+      }
+    ],
+    pageNum:1,
+    pageSize:2
+  }
   window.getCurrentDetailObj = function(){
     var goodsId = window.location.pathname.split('/').filter(function(dir) { return dir !== ''; }).slice(-1)[0];
     if(goodsId){
