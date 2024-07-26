@@ -11524,7 +11524,7 @@ button:hover,
     margin-right: 24px;
 }
 
-@media only screen and (max-width: 1110px){
+@media only screen and (max-width: 850px){
   .themesflat-top.style-01.myheader {
     display:none
   }
@@ -11760,4 +11760,8 @@ abc{
 }
 .tfcl-listing-specifications .listing-infor-box .icon{
   margin-right: 4px !important;
+}
+.my-pagination-wrap{
+  position: relative;
+  top:15px;
 }

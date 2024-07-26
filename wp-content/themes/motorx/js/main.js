@@ -736,7 +736,7 @@
       "All",
       "Hot",
       "New",
-      "Max Repurchase",
+      // "Max Repurchase",
       "Led Headlight Bulb",
       "Halogen Headlamp Bulb",
     ],
@@ -1004,6 +1004,7 @@
       e.stopPropagation();
       e.preventDefault();
       window.location.href='/carheadlights'
+      sessionStorage.setItem('currentCatagory',$(this).text())
     });
 
 
