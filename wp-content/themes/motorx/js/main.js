@@ -555,13 +555,13 @@
           var myElement = document.querySelector("#carheadlights .my-filter-bar");
 
           var scrollHeight = getElementTop(myElement);
-          $("html, body").animate({ scrollTop: scrollHeight - 80 }, 0);
+          $("html, body").animate({ scrollTop: scrollHeight - 60 }, 0);
         }else if(wrapperDom2 && wrapperDom2.length){
           // 获取商品列表上边界所在高度，滚动到原来高度
           var myElement = document.querySelector(".my-condition-tab-wrap");
 
           var scrollHeight = getElementTop(myElement);
-          $("html, body").animate({ scrollTop: scrollHeight - 45 }, 0);
+          $("html, body").animate({ scrollTop: scrollHeight - 32 }, 0);
         }
       });
   };
@@ -687,7 +687,7 @@
         var myElement = document.querySelector(".my-filter-bar");
 
         var scrollHeight = getElementTop(myElement);
-        $("html, body").animate({ scrollTop: scrollHeight - 80 }, 0);
+        $("html, body").animate({ scrollTop: scrollHeight - 60 }, 0);
       });
     }else if(wrapperDom2 && wrapperDom2.length){
       
@@ -703,7 +703,7 @@
         var myElement = document.querySelector(".my-condition-tab-wrap");
   
         var scrollHeight = getElementTop(myElement);
-        $("html, body").animate({ scrollTop: scrollHeight - 45 }, 0);
+        $("html, body").animate({ scrollTop: scrollHeight - 32 }, 0);
         setTimeout(() => {
           sessionStorage.setItem('currentCatagory','')
         }, 1000);
@@ -725,7 +725,7 @@
         var myElement = document.querySelector(".my-condition-tab-wrap");
 
         var scrollHeight = getElementTop(myElement);
-        $("html, body").animate({ scrollTop: scrollHeight - 45 }, 0);
+        $("html, body").animate({ scrollTop: scrollHeight - 32 }, 0);
       });
     
     }
@@ -797,13 +797,13 @@
         catagory: ["All", "Hot", "Led Headlight Bulb"],
         video:'https://youtu.be/vBtYtWlO8Kg?si=J4WBT2Lk0eRUbQG5',
         banner: [
-          "/wp-content/uploads/carheadlights/LED.H4.Headlight.Bulb/LED.H4.Headlight.Bulb-1.jpg",
-          "/wp-content/uploads/carheadlights/LED.H4.Headlight.Bulb/LED.H4.Headlight.Bulb-1.jpg",
-          "/wp-content/uploads/carheadlights/LED.H4.Headlight.Bulb/LED.H4.Headlight.Bulb-1.jpg",
-          "/wp-content/uploads/carheadlights/LED.H4.Headlight.Bulb/LED.H4.Headlight.Bulb-1.jpg",
-          "/wp-content/uploads/carheadlights/LED.H4.Headlight.Bulb/LED.H4.Headlight.Bulb-1.jpg",
-          "/wp-content/uploads/carheadlights/LED.H4.Headlight.Bulb/LED.H4.Headlight.Bulb-1.jpg",
-          "/wp-content/uploads/carheadlights/LED.H4.Headlight.Bulb/LED.H4.Headlight.Bulb-1.jpg"
+          "/imgs/carheadlights/LED.H4.Headlight.Bulb-1.jpg",
+          "/imgs/carheadlights/LED.H4.Headlight.Bulb-1.jpg",
+          "/imgs/carheadlights/LED.H4.Headlight.Bulb-1.jpg",
+          "/imgs/carheadlights/LED.H4.Headlight.Bulb-1.jpg",
+          "/imgs/carheadlights/LED.H4.Headlight.Bulb-1.jpg",
+          "/imgs/carheadlights/LED.H4.Headlight.Bulb-1.jpg",
+          "/imgs/carheadlights/LED.H4.Headlight.Bulb-1.jpg"
         ],
         desc:{
           en:[
